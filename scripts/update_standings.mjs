@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 
-const API_URL = 'https://www.sofascore.com/api/v1/unique-tournament/17/season/96668/standings/total';
+const API_URL = 'https://api.sofascore.com/api/v1/unique-tournament/17/season/96668/standings/total';
 const STANDINGS_PATH = 'data/standings.json';
 const TEAMS_PATH = 'data/teams.json';
 
@@ -112,7 +112,7 @@ const jst = new Intl.DateTimeFormat('sv-SE', {
   year: 'numeric', month: '2-digit', day: '2-digit',
   hour: '2-digit', minute: '2-digit', second: '2-digit',
   hour12: false
-}).format(now).replace(' ', ' ') + ' JST';
+}).format(now) + ' JST';
 
 const output = {
   updated: jst,
