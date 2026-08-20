@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T03:42:08.809Z",
+  "updated": "2026-08-20T14:21:36.906Z",
   "participants": [
     {
       "name": "田中雄太郎",
@@ -27,6 +27,34 @@
         "Tottenham Hotspur"
       ],
       "submitted_at": "2026-08-20T03:42:08.808Z"
+    },
+    {
+      "name": "細川峻平",
+      "github_user": "red-appless",
+      "prediction": [
+        "Arsenal",
+        "Chelsea",
+        "Manchester City",
+        "Aston Villa",
+        "Liverpool",
+        "Manchester United",
+        "Brighton & Hove Albion",
+        "AFC Bournemouth",
+        "Sunderland",
+        "Leeds United",
+        "Newcastle United",
+        "Everton",
+        "Tottenham Hotspur",
+        "Crystal Palace",
+        "Nottingham Forest",
+        "Brentford",
+        "Coventry City",
+        "Hull City",
+        "Fulham",
+        "Ipswich Town"
+      ],
+      "submitted_at": "2026-08-20T14:21:16.000Z",
+      "updated_at": "2026-08-20T14:21:36.906Z"
     }
   ]
 }
