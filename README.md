@@ -24,3 +24,5 @@
 ## 現在順位の更新
 
 `data/standings.json` を更新して main に反映すると、Pages が自動再デプロイされます。
+
+_Last deployment trigger: 2026-08-20_
