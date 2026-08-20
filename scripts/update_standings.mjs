@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 
-const API_URL = 'https://api.sofascore.com/api/v1/unique-tournament/17/season/96668/standings/total';
+const API_URL = 'https://www.thesportsdb.com/api/v1/json/123/lookuptable.php?l=4328&s=2026-2027';
 const STANDINGS_PATH = 'data/standings.json';
 const TEAMS_PATH = 'data/teams.json';
 
@@ -12,6 +12,7 @@ const aliases = new Map([
   ['brentford', 'Brentford'],
   ['brighton & hove albion', 'Brighton & Hove Albion'],
   ['brighton and hove albion', 'Brighton & Hove Albion'],
+  ['brighton and hove', 'Brighton & Hove Albion'],
   ['brighton', 'Brighton & Hove Albion'],
   ['chelsea', 'Chelsea'],
   ['coventry city', 'Coventry City'],
@@ -50,51 +51,71 @@ function number(value, fallback = 0) {
   return Number.isFinite(parsed) ? parsed : fallback;
 }
 
+async function fetchJsonWithRetry(url, attempts = 3) {
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        headers: {
+          accept: 'application/json',
+          'user-agent': 'PL-Ranking-Prediction/1.0'
+        },
+        signal: AbortSignal.timeout(15000)
+      });
+
+      if (response.ok) return await response.json();
+
+      lastError = new Error(`HTTP ${response.status}`);
+      if (response.status < 500 && response.status !== 429) break;
+    } catch (error) {
+      lastError = error;
+    }
+
+    if (attempt < attempts) {
+      await new Promise(resolve => setTimeout(resolve, attempt * 2000));
+    }
+  }
+  throw lastError || new Error('Unable to fetch standings');
+}
+
 const expectedTeams = JSON.parse(fs.readFileSync(TEAMS_PATH, 'utf8'));
 const expectedSet = new Set(expectedTeams);
 const previous = JSON.parse(fs.readFileSync(STANDINGS_PATH, 'utf8'));
 
-const response = await fetch(API_URL, {
-  headers: {
-    'accept': 'application/json',
-    'user-agent': 'Mozilla/5.0 (compatible; PL-Ranking-Prediction/1.0; +https://github.com/tnkytr1182-bit/-premier-league-ranking-prediction)'
-  }
-});
-
-if (!response.ok) {
-  throw new Error(`Standings API returned HTTP ${response.status}`);
+let payload;
+try {
+  payload = await fetchJsonWithRetry(API_URL);
+} catch (error) {
+  // Keep the last known-good standings instead of failing the GitHub Action.
+  console.warn(`Standings fetch unavailable (${error.message}). Keeping existing standings.`);
+  process.exit(0);
 }
 
-const payload = await response.json();
-const groups = Array.isArray(payload.standings)
-  ? payload.standings
-  : Array.isArray(payload.data?.groups)
-    ? payload.data.groups
-    : [];
-
-const rows = groups.flatMap(group => Array.isArray(group.rows) ? group.rows : []);
+const rows = Array.isArray(payload?.table) ? payload.table : [];
 if (rows.length < 20) {
-  throw new Error(`Expected at least 20 standings rows, received ${rows.length}`);
+  console.warn(`TheSportsDB returned ${rows.length} standings rows. Keeping existing standings.`);
+  process.exit(0);
 }
 
 const normalized = rows.map(row => {
-  const team = canonicalTeam(row.team?.name || row.team?.shortName || row.team?.short_name);
+  const team = canonicalTeam(row.strTeam);
   return {
     team,
-    rank: number(row.position),
-    played: number(row.matches),
-    won: number(row.wins),
-    drawn: number(row.draws),
-    lost: number(row.losses),
-    gd: number(row.scoresFor ?? row.scores_for) - number(row.scoresAgainst ?? row.scores_against),
-    points: number(row.points)
+    rank: number(row.intRank),
+    played: number(row.intPlayed),
+    won: number(row.intWin),
+    drawn: number(row.intDraw),
+    lost: number(row.intLoss),
+    gd: number(row.intGoalDifference, number(row.intGoalsFor) - number(row.intGoalsAgainst)),
+    points: number(row.intPoints)
   };
 }).filter(row => expectedSet.has(row.team));
 
 const seen = new Set(normalized.map(row => row.team));
 const missing = expectedTeams.filter(team => !seen.has(team));
 if (normalized.length !== expectedTeams.length || missing.length) {
-  throw new Error(`Team validation failed. Found ${normalized.length}/20. Missing: ${missing.join(', ') || 'none'}`);
+  console.warn(`Team validation incomplete. Found ${normalized.length}/20. Missing: ${missing.join(', ') || 'none'}. Keeping existing standings.`);
+  process.exit(0);
 }
 
 normalized.sort((a, b) => a.rank - b.rank || b.points - a.points || b.gd - a.gd || a.team.localeCompare(b.team));
@@ -116,7 +137,7 @@ const jst = new Intl.DateTimeFormat('sv-SE', {
 
 const output = {
   updated: jst,
-  source: 'Sofascore Premier League 2026/27 standings',
+  source: 'TheSportsDB English Premier League 2026/27 standings',
   source_url: API_URL,
   teams: normalized
 };
