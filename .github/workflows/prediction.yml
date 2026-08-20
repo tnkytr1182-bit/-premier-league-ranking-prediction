@@ -1,0 +1,38 @@
+name: Process prediction
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  process:
+    if: startsWith(github.event.issue.title, '[Prediction] ')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Process prediction
+        run: node scripts/process_prediction.mjs
+      - name: Commit prediction
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/predictions.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Add prediction from issue #${{ github.event.issue.number }}"
+            git push origin main
+          fi
+      - name: Close issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue close "${{ github.event.issue.number }}" --comment "予想を登録しました。サイトへの反映には少し時間がかかる場合があります。"
