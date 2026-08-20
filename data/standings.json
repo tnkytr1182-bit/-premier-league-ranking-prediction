@@ -1,0 +1,25 @@
+{
+  "updated":"2026-08-20 11:55 JST",
+  "teams":[
+    {"team":"Arsenal","rank":1,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Aston Villa","rank":2,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"AFC Bournemouth","rank":3,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Brentford","rank":4,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Brighton & Hove Albion","rank":5,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Chelsea","rank":6,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Coventry City","rank":7,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Crystal Palace","rank":8,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Everton","rank":9,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Fulham","rank":10,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Hull City","rank":11,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Ipswich Town","rank":12,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Leeds United","rank":13,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Liverpool","rank":14,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Manchester City","rank":15,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Manchester United","rank":16,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Newcastle United","rank":17,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Nottingham Forest","rank":18,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Sunderland","rank":19,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0},
+    {"team":"Tottenham Hotspur","rank":20,"played":0,"won":0,"drawn":0,"lost":0,"gd":0,"points":0}
+  ]
+}
