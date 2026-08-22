@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 
-const API_URL = 'https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=true';
+const BASE = 'https://sdp-prem-prod.premier-league-prod.pulselive.com';
+const TABLE_URL = `${BASE}/api/v5/competitions/8/seasons/2026/standings?live=false`;
+const MATCHES_URL = `${BASE}/api/v2/matches?competition=8&season=2026&_limit=500`;
 const STANDINGS_PATH = 'data/standings.json';
 const TEAMS_PATH = 'data/teams.json';
 const SEASON_STARTED_AT = new Date('2026-08-21T22:30:00Z');
@@ -31,7 +33,10 @@ async function fetchJson(url){
   let lastError;
   for(let i=1;i<=3;i++){
     try{
-      const r=await fetch(url,{headers:{accept:'application/json','user-agent':'Mozilla/5.0 PL-Ranking-Prediction/1.0','origin':'https://www.premierleague.com','referer':'https://www.premierleague.com/'},signal:AbortSignal.timeout(20000)});
+      const r=await fetch(url,{
+        headers:{accept:'application/json','user-agent':'Mozilla/5.0 PL-Ranking-Prediction/1.0','origin':'https://www.premierleague.com','referer':'https://www.premierleague.com/'},
+        signal:AbortSignal.timeout(20000)
+      });
       if(r.ok)return await r.json();
       lastError=new Error(`HTTP ${r.status} from ${url}`);
     }catch(e){lastError=e;}
@@ -45,55 +50,89 @@ const expectedSet=new Set(expectedTeams);
 const previous=JSON.parse(fs.readFileSync(STANDINGS_PATH,'utf8'));
 const previousPlayed=(previous.teams||[]).reduce((sum,t)=>sum+num(t.played),0);
 
-const payload=await fetchJson(API_URL);
-const tables=Array.isArray(payload?.tables)?payload.tables:[];
-const entries=tables.flatMap(t=>Array.isArray(t?.entries)?t.entries:[]);
-if(entries.length<20)throw new Error(`Official live standings returned only ${entries.length} entries`);
+const [tablePayload,matchesPayload]=await Promise.all([fetchJson(TABLE_URL),fetchJson(MATCHES_URL)]);
 
-const rows=[];
-const unmapped=[];
+const tables=Array.isArray(tablePayload?.tables)?tablePayload.tables:[];
+const entries=tables.flatMap(t=>Array.isArray(t?.entries)?t.entries:[]);
+if(entries.length<20)throw new Error(`Official standings returned only ${entries.length} entries`);
+
+const stats=new Map();
 for(const entry of entries){
   const teamObj=entry?.team ?? entry?.owner ?? {};
   const team=canonical(teamObj?.name,teamObj?.club?.name,teamObj?.shortName,teamObj?.short_name,entry?.teamName);
+  if(!expectedSet.has(team))continue;
   const o=entry?.overall ?? entry?.total ?? entry;
-  if(!expectedSet.has(team)){unmapped.push({raw:teamObj,derived:team});continue;}
-  rows.push({
+  const gf=num(o?.goalsFor);
+  const ga=num(o?.goalsAgainst);
+  stats.set(team,{
     team,
-    rank:num(o?.position ?? entry?.position),
-    played:num(o?.played),
-    won:num(o?.won),
-    drawn:num(o?.drawn),
-    lost:num(o?.lost),
-    gd:num(o?.goalDifference, num(o?.goalsFor)-num(o?.goalsAgainst)),
-    points:num(o?.points)
+    baseRank:num(o?.position ?? entry?.position,99),
+    played:num(o?.played),won:num(o?.won),drawn:num(o?.drawn),lost:num(o?.lost),
+    gf,ga,gd:gf-ga,points:num(o?.points)
   });
 }
-
-const unique=new Map(rows.map(r=>[r.team,r]));
-const normalized=[...unique.values()].sort((a,b)=>a.rank-b.rank);
-const found=new Set(normalized.map(r=>r.team));
-const missing=expectedTeams.filter(t=>!found.has(t));
-if(normalized.length!==20||missing.length){
-  console.error('Unmapped official live entries:',JSON.stringify(unmapped));
-  throw new Error(`Official live standings team validation failed (${normalized.length}/20). Missing: ${missing.join(', ')}`);
+if(stats.size!==20){
+  const missing=expectedTeams.filter(t=>!stats.has(t));
+  throw new Error(`Official standings team validation failed (${stats.size}/20). Missing: ${missing.join(', ')}`);
 }
 
-const ranks=normalized.map(r=>r.rank).sort((a,b)=>a-b);
-if(ranks.some((r,i)=>r!==i+1))throw new Error(`Invalid official live ranks: ${ranks.join(',')}`);
+const allMatches = Array.isArray(matchesPayload)
+  ? matchesPayload
+  : Array.isArray(matchesPayload?.content)
+    ? matchesPayload.content
+    : Array.isArray(matchesPayload?.matches)
+      ? matchesPayload.matches
+      : Array.isArray(matchesPayload?.data)
+        ? matchesPayload.data
+        : [];
+
+const livePeriods=new Set(['live','firsthalf','first half','halftime','half time','secondhalf','second half','extra time','extratime']);
+const liveMatches=[];
+for(const match of allMatches){
+  const period=key(match?.period ?? match?.status ?? match?.matchStatus);
+  if(!livePeriods.has(period))continue;
+  const hObj=match?.homeTeam ?? match?.home ?? {};
+  const aObj=match?.awayTeam ?? match?.away ?? {};
+  const home=canonical(hObj?.name,hObj?.shortName,hObj?.short_name);
+  const away=canonical(aObj?.name,aObj?.shortName,aObj?.short_name);
+  const hs=num(hObj?.score ?? match?.homeScore,NaN);
+  const as=num(aObj?.score ?? match?.awayScore,NaN);
+  if(!expectedSet.has(home)||!expectedSet.has(away)||!Number.isFinite(hs)||!Number.isFinite(as))continue;
+  liveMatches.push({home,away,hs,as,period});
+}
+
+for(const m of liveMatches){
+  const h=stats.get(m.home), a=stats.get(m.away);
+  h.played++; a.played++;
+  h.gf+=m.hs; h.ga+=m.as; a.gf+=m.as; a.ga+=m.hs;
+  if(m.hs>m.as){h.won++;a.lost++;h.points+=3;}
+  else if(m.hs<m.as){a.won++;h.lost++;a.points+=3;}
+  else{h.drawn++;a.drawn++;h.points++;a.points++;}
+}
+for(const s of stats.values())s.gd=s.gf-s.ga;
+
+const normalized=[...stats.values()]
+  .sort((a,b)=>b.points-a.points||b.gd-a.gd||b.gf-a.gf||a.baseRank-b.baseRank||a.team.localeCompare(b.team))
+  .map((s,i)=>({team:s.team,rank:i+1,played:s.played,won:s.won,drawn:s.drawn,lost:s.lost,gd:s.gd,points:s.points}));
 
 const totalPlayed=normalized.reduce((sum,t)=>sum+t.played,0);
-if(new Date()>SEASON_STARTED_AT && totalPlayed===0){
-  throw new Error('Refusing zero-match live standings after season start');
-}
-if(previousPlayed>0 && totalPlayed<previousPlayed){
-  throw new Error(`Refusing regressed live standings: total played ${totalPlayed} < previous ${previousPlayed}`);
+if(new Date()>SEASON_STARTED_AT&&totalPlayed===0)throw new Error('Refusing zero-match standings after season start');
+if(previousPlayed>0&&totalPlayed<previousPlayed){
+  console.log(`Provider temporarily regressed: total played ${totalPlayed} < previous ${previousPlayed}. Keeping previous data.`);
+  process.exit(0);
 }
 
 if(JSON.stringify(previous.teams||[])===JSON.stringify(normalized)){
-  console.log(`Live standings unchanged. Official table total played=${totalPlayed}.`);
+  console.log(`Standings unchanged. Live matches=${liveMatches.length}; total played=${totalPlayed}.`);
   process.exit(0);
 }
 
 const jst=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date())+' JST';
-fs.writeFileSync(STANDINGS_PATH,JSON.stringify({updated:jst,source:'Premier League official live standings (Pulselive)',source_url:API_URL,teams:normalized},null,2)+'\n');
-console.log(`Updated official live standings at ${jst}; total played=${totalPlayed}`);
+fs.writeFileSync(STANDINGS_PATH,JSON.stringify({
+  updated:jst,
+  source:liveMatches.length?'Premier League official table + live match scores (Pulselive)':'Premier League official standings (Pulselive)',
+  source_url:liveMatches.length?MATCHES_URL:TABLE_URL,
+  live_matches:liveMatches.map(({home,away,hs,as})=>({home,away,home_score:hs,away_score:as})),
+  teams:normalized
+},null,2)+'\n');
+console.log(`Updated standings at ${jst}; live matches=${liveMatches.length}; total played=${totalPlayed}`);
