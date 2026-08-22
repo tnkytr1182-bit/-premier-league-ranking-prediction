@@ -1,182 +1,99 @@
 import fs from 'node:fs';
 
-const BOOTSTRAP_URL = 'https://fantasy.premierleague.com/api/bootstrap-static/';
-const FIXTURES_URL = 'https://fantasy.premierleague.com/api/fixtures/';
+const API_URL = 'https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false';
 const STANDINGS_PATH = 'data/standings.json';
 const TEAMS_PATH = 'data/teams.json';
+const SEASON_STARTED_AT = new Date('2026-08-21T22:30:00Z');
 
 const aliases = new Map([
-  ['arsenal', 'Arsenal'],
-  ['aston villa', 'Aston Villa'],
-  ['afc bournemouth', 'AFC Bournemouth'],
-  ['bournemouth', 'AFC Bournemouth'],
-  ['brentford', 'Brentford'],
-  ['brighton & hove albion', 'Brighton & Hove Albion'],
-  ['brighton and hove albion', 'Brighton & Hove Albion'],
-  ['brighton and hove', 'Brighton & Hove Albion'],
-  ['brighton', 'Brighton & Hove Albion'],
-  ['chelsea', 'Chelsea'],
-  ['coventry city', 'Coventry City'],
-  ['coventry', 'Coventry City'],
-  ['crystal palace', 'Crystal Palace'],
-  ['everton', 'Everton'],
-  ['fulham', 'Fulham'],
-  ['hull city', 'Hull City'],
-  ['hull', 'Hull City'],
-  ['ipswich town', 'Ipswich Town'],
-  ['ipswich', 'Ipswich Town'],
-  ['leeds united', 'Leeds United'],
-  ['leeds', 'Leeds United'],
-  ['liverpool', 'Liverpool'],
-  ['manchester city', 'Manchester City'],
-  ['man city', 'Manchester City'],
-  ['manchester united', 'Manchester United'],
-  ['man utd', 'Manchester United'],
-  ['newcastle united', 'Newcastle United'],
-  ['newcastle', 'Newcastle United'],
-  ['nottingham forest', 'Nottingham Forest'],
-  ["nott'm forest", 'Nottingham Forest'],
-  ['nottm forest', 'Nottingham Forest'],
-  ['forest', 'Nottingham Forest'],
-  ['sunderland', 'Sunderland'],
-  ['tottenham hotspur', 'Tottenham Hotspur'],
-  ['tottenham', 'Tottenham Hotspur'],
-  ['spurs', 'Tottenham Hotspur']
+  ['arsenal','Arsenal'],['aston villa','Aston Villa'],['bournemouth','AFC Bournemouth'],['afc bournemouth','AFC Bournemouth'],
+  ['brentford','Brentford'],['brighton','Brighton & Hove Albion'],['brighton & hove albion','Brighton & Hove Albion'],
+  ['brighton and hove albion','Brighton & Hove Albion'],['chelsea','Chelsea'],['coventry','Coventry City'],['coventry city','Coventry City'],
+  ['crystal palace','Crystal Palace'],['everton','Everton'],['fulham','Fulham'],['hull','Hull City'],['hull city','Hull City'],
+  ['ipswich','Ipswich Town'],['ipswich town','Ipswich Town'],['leeds','Leeds United'],['leeds united','Leeds United'],
+  ['liverpool','Liverpool'],['manchester city','Manchester City'],['man city','Manchester City'],
+  ['manchester united','Manchester United'],['man utd','Manchester United'],['newcastle','Newcastle United'],
+  ['newcastle united','Newcastle United'],['nottingham forest','Nottingham Forest'],["nott'm forest",'Nottingham Forest'],
+  ['nottm forest','Nottingham Forest'],['forest','Nottingham Forest'],['sunderland','Sunderland'],
+  ['tottenham hotspur','Tottenham Hotspur'],['tottenham','Tottenham Hotspur'],['spurs','Tottenham Hotspur']
 ]);
 
-function key(name) {
-  return String(name || '')
-    .normalize('NFKD')
-    .replace(/[’‘]/g, "'")
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, ' ');
+function key(value){
+  return String(value ?? '').normalize('NFKD').replace(/[’‘]/g,"'").trim().toLowerCase().replace(/\s+/g,' ');
 }
-
-function canonical(...names) {
-  for (const name of names) {
-    const mapped = aliases.get(key(name));
-    if (mapped) return mapped;
-  }
-  return String(names.find(Boolean) || '').trim();
+function canonical(...names){
+  for(const name of names){const mapped=aliases.get(key(name));if(mapped)return mapped;}
+  return String(names.find(Boolean) ?? '').trim();
 }
+function num(v, fallback=0){const n=Number(v);return Number.isFinite(n)?n:fallback;}
 
-async function fetchJson(url) {
+async function fetchJson(url){
   let lastError;
-  for (let i = 1; i <= 3; i++) {
-    try {
-      const r = await fetch(url, {
-        headers: {accept:'application/json','user-agent':'PL-Ranking-Prediction/1.0'},
-        signal: AbortSignal.timeout(20000)
-      });
-      if (r.ok) return await r.json();
-      lastError = new Error(`HTTP ${r.status} from ${url}`);
-    } catch (e) {
-      lastError = e;
-    }
-    if (i < 3) await new Promise(resolve => setTimeout(resolve, i * 2000));
+  for(let i=1;i<=3;i++){
+    try{
+      const r=await fetch(url,{headers:{accept:'application/json','user-agent':'Mozilla/5.0 PL-Ranking-Prediction/1.0','origin':'https://www.premierleague.com','referer':'https://www.premierleague.com/'},signal:AbortSignal.timeout(20000)});
+      if(r.ok)return await r.json();
+      lastError=new Error(`HTTP ${r.status} from ${url}`);
+    }catch(e){lastError=e;}
+    if(i<3)await new Promise(resolve=>setTimeout(resolve,i*2000));
   }
   throw lastError;
 }
 
-const expectedTeams = JSON.parse(fs.readFileSync(TEAMS_PATH, 'utf8'));
-const expectedSet = new Set(expectedTeams);
-const previous = JSON.parse(fs.readFileSync(STANDINGS_PATH, 'utf8'));
+const expectedTeams=JSON.parse(fs.readFileSync(TEAMS_PATH,'utf8'));
+const expectedSet=new Set(expectedTeams);
+const previous=JSON.parse(fs.readFileSync(STANDINGS_PATH,'utf8'));
+const previousPlayed=(previous.teams||[]).reduce((sum,t)=>sum+num(t.played),0);
 
-let bootstrap, fixtures;
-try {
-  [bootstrap, fixtures] = await Promise.all([fetchJson(BOOTSTRAP_URL), fetchJson(FIXTURES_URL)]);
-} catch (e) {
-  console.error(`FPL fetch failed: ${e.message}`);
-  process.exit(1);
+const payload=await fetchJson(API_URL);
+const tables=Array.isArray(payload?.tables)?payload.tables:[];
+const entries=tables.flatMap(t=>Array.isArray(t?.entries)?t.entries:[]);
+if(entries.length<20)throw new Error(`Official standings returned only ${entries.length} entries`);
+
+const rows=[];
+const unmapped=[];
+for(const entry of entries){
+  const teamObj=entry?.team ?? entry?.owner ?? {};
+  const team=canonical(teamObj?.name,teamObj?.club?.name,teamObj?.shortName,teamObj?.short_name,entry?.teamName);
+  const o=entry?.overall ?? entry?.total ?? entry;
+  if(!expectedSet.has(team)){unmapped.push({raw:teamObj,derived:team});continue;}
+  rows.push({
+    team,
+    rank:num(o?.position ?? entry?.position),
+    played:num(o?.played),
+    won:num(o?.won),
+    drawn:num(o?.drawn),
+    lost:num(o?.lost),
+    gd:num(o?.goalDifference, num(o?.goalsFor)-num(o?.goalsAgainst)),
+    points:num(o?.points)
+  });
 }
 
-const fplTeams = Array.isArray(bootstrap?.teams) ? bootstrap.teams : [];
-if (fplTeams.length !== 20) throw new Error(`Expected 20 FPL teams, got ${fplTeams.length}`);
-
-const idToTeam = new Map();
-const unmapped = [];
-for (const t of fplTeams) {
-  const name = canonical(t.name, t.short_name);
-  if (expectedSet.has(name)) idToTeam.set(t.id, name);
-  else unmapped.push(t);
+const unique=new Map(rows.map(r=>[r.team,r]));
+const normalized=[...unique.values()].sort((a,b)=>a.rank-b.rank);
+const found=new Set(normalized.map(r=>r.team));
+const missing=expectedTeams.filter(t=>!found.has(t));
+if(normalized.length!==20||missing.length){
+  console.error('Unmapped official entries:',JSON.stringify(unmapped));
+  throw new Error(`Official standings team validation failed (${normalized.length}/20). Missing: ${missing.join(', ')}`);
 }
 
-// If exactly one FPL club and one expected club remain, they must represent
-// the same Premier League member; tolerate the provider's naming variant.
-if (idToTeam.size === 19 && unmapped.length === 1) {
-  const found = new Set(idToTeam.values());
-  const missing = expectedTeams.filter(team => !found.has(team));
-  if (missing.length === 1) {
-    const t = unmapped[0];
-    idToTeam.set(t.id, missing[0]);
-    console.log(`Auto-mapped FPL team "${t.name}" (${t.short_name}) -> "${missing[0]}"`);
-    unmapped.length = 0;
-  }
+const ranks=normalized.map(r=>r.rank).sort((a,b)=>a-b);
+if(ranks.some((r,i)=>r!==i+1))throw new Error(`Invalid official ranks: ${ranks.join(',')}`);
+
+const totalPlayed=normalized.reduce((sum,t)=>sum+t.played,0);
+if(new Date()>SEASON_STARTED_AT && totalPlayed===0){
+  throw new Error('Refusing zero-match standings after season start');
+}
+if(previousPlayed>0 && totalPlayed<previousPlayed){
+  throw new Error(`Refusing regressed standings: total played ${totalPlayed} < previous ${previousPlayed}`);
 }
 
-if (idToTeam.size !== 20) {
-  const found = new Set(idToTeam.values());
-  const missing = expectedTeams.filter(t => !found.has(t));
-  console.error('FPL teams:', JSON.stringify(fplTeams.map(t => ({id:t.id,name:t.name,short_name:t.short_name}))));
-  console.error('Unmapped FPL teams:', JSON.stringify(unmapped.map(t => ({id:t.id,name:t.name,short_name:t.short_name}))));
-  throw new Error(`FPL team mapping incomplete (${idToTeam.size}/20). Missing: ${missing.join(', ')}`);
-}
-
-const stats = new Map(expectedTeams.map(team => [team, {
-  team, played:0, won:0, drawn:0, lost:0, gf:0, ga:0, gd:0, points:0
-}]));
-
-let completed = 0;
-for (const f of fixtures) {
-  if (!f.finished || f.team_h_score == null || f.team_a_score == null) continue;
-  const home = idToTeam.get(f.team_h);
-  const away = idToTeam.get(f.team_a);
-  if (!home || !away) continue;
-
-  completed++;
-  const h = stats.get(home);
-  const a = stats.get(away);
-  const hs = Number(f.team_h_score);
-  const as = Number(f.team_a_score);
-
-  h.played++; a.played++;
-  h.gf += hs; h.ga += as;
-  a.gf += as; a.ga += hs;
-
-  if (hs > as) {
-    h.won++; a.lost++; h.points += 3;
-  } else if (hs < as) {
-    a.won++; h.lost++; a.points += 3;
-  } else {
-    h.drawn++; a.drawn++; h.points++; a.points++;
-  }
-}
-
-for (const s of stats.values()) s.gd = s.gf - s.ga;
-
-const normalized = [...stats.values()]
-  .sort((a,b) => b.points-a.points || b.gd-a.gd || b.gf-a.gf || a.team.localeCompare(b.team))
-  .map((s,i) => ({
-    team:s.team, rank:i+1, played:s.played, won:s.won, drawn:s.drawn,
-    lost:s.lost, gd:s.gd, points:s.points
-  }));
-
-if (JSON.stringify(previous.teams || []) === JSON.stringify(normalized)) {
-  console.log(`Standings unchanged. FPL reports ${completed} completed matches.`);
+if(JSON.stringify(previous.teams||[])===JSON.stringify(normalized)){
+  console.log(`Standings unchanged. Official table total played=${totalPlayed}.`);
   process.exit(0);
 }
 
-const jst = new Intl.DateTimeFormat('sv-SE', {
-  timeZone:'Asia/Tokyo', year:'numeric', month:'2-digit', day:'2-digit',
-  hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false
-}).format(new Date()) + ' JST';
-
-fs.writeFileSync(STANDINGS_PATH, JSON.stringify({
-  updated:jst,
-  source:'Official Fantasy Premier League fixtures',
-  source_url:FIXTURES_URL,
-  teams:normalized
-}, null, 2) + '\n');
-
-console.log(`Updated standings from ${completed} completed matches at ${jst}`);
+const jst=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date())+' JST';
+fs.writeFileSync(STANDINGS_PATH,JSON.stringify({updated:jst,source:'Premier League official standings (Pulselive)',source_url:API_URL,teams:normalized},null,2)+'\n');
+console.log(`Updated official standings at ${jst}; total played=${totalPlayed}`);
