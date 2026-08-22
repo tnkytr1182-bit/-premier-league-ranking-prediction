@@ -1,24 +1,12 @@
 {
-  "updated": "2026-08-23 00:45:18 JST",
+  "updated": "2026-08-23 01:44:41 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
-      "home": "Everton",
-      "away": "Crystal Palace",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "Ipswich Town",
-      "away": "Sunderland",
+      "home": "Brentford",
+      "away": "Tottenham Hotspur",
       "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "Nottingham Forest",
-      "away": "Leeds United",
-      "home_score": 0,
       "away_score": 0
     }
   ],
@@ -34,7 +22,7 @@
       "points": 3
     },
     {
-      "team": "Hull City",
+      "team": "Everton",
       "rank": 2,
       "played": 1,
       "won": 1,
@@ -44,7 +32,7 @@
       "points": 3
     },
     {
-      "team": "Everton",
+      "team": "Hull City",
       "rank": 3,
       "played": 1,
       "won": 1,
@@ -57,45 +45,35 @@
       "team": "Ipswich Town",
       "rank": 4,
       "played": 1,
-      "won": 0,
-      "drawn": 1,
+      "won": 1,
+      "drawn": 0,
       "lost": 0,
-      "gd": 0,
-      "points": 1
-    },
-    {
-      "team": "Sunderland",
-      "rank": 5,
-      "played": 1,
-      "won": 0,
-      "drawn": 1,
-      "lost": 0,
-      "gd": 0,
-      "points": 1
+      "gd": 1,
+      "points": 3
     },
     {
       "team": "Leeds United",
-      "rank": 6,
+      "rank": 5,
       "played": 1,
-      "won": 0,
-      "drawn": 1,
+      "won": 1,
+      "drawn": 0,
       "lost": 0,
-      "gd": 0,
-      "points": 1
+      "gd": 1,
+      "points": 3
     },
     {
-      "team": "Nottingham Forest",
-      "rank": 7,
+      "team": "Brentford",
+      "rank": 6,
       "played": 1,
-      "won": 0,
-      "drawn": 1,
+      "won": 1,
+      "drawn": 0,
       "lost": 0,
-      "gd": 0,
-      "points": 1
+      "gd": 1,
+      "points": 3
     },
     {
       "team": "Aston Villa",
-      "rank": 8,
+      "rank": 7,
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -105,17 +83,7 @@
     },
     {
       "team": "AFC Bournemouth",
-      "rank": 9,
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "gd": 0,
-      "points": 0
-    },
-    {
-      "team": "Brentford",
-      "rank": 10,
+      "rank": 8,
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -125,7 +93,7 @@
     },
     {
       "team": "Brighton & Hove Albion",
-      "rank": 11,
+      "rank": 9,
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -135,7 +103,7 @@
     },
     {
       "team": "Chelsea",
-      "rank": 12,
+      "rank": 10,
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -145,7 +113,7 @@
     },
     {
       "team": "Fulham",
-      "rank": 13,
+      "rank": 11,
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -155,7 +123,7 @@
     },
     {
       "team": "Liverpool",
-      "rank": 14,
+      "rank": 12,
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -165,7 +133,7 @@
     },
     {
       "team": "Manchester City",
-      "rank": 15,
+      "rank": 13,
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -175,7 +143,7 @@
     },
     {
       "team": "Newcastle United",
-      "rank": 16,
+      "rank": 14,
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -184,13 +152,33 @@
       "points": 0
     },
     {
-      "team": "Tottenham Hotspur",
-      "rank": 17,
-      "played": 0,
+      "team": "Sunderland",
+      "rank": 15,
+      "played": 1,
       "won": 0,
       "drawn": 0,
-      "lost": 0,
-      "gd": 0,
+      "lost": 1,
+      "gd": -1,
+      "points": 0
+    },
+    {
+      "team": "Tottenham Hotspur",
+      "rank": 16,
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "gd": -1,
+      "points": 0
+    },
+    {
+      "team": "Nottingham Forest",
+      "rank": 17,
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "gd": -1,
       "points": 0
     },
     {
