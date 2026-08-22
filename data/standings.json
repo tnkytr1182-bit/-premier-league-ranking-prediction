@@ -1,15 +1,8 @@
 {
-  "updated": "2026-08-23 02:46:58 JST",
-  "source": "Premier League official table + live match scores (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
-  "live_matches": [
-    {
-      "home": "Brentford",
-      "away": "Tottenham Hotspur",
-      "home_score": 3,
-      "away_score": 0
-    }
-  ],
+  "updated": "2026-08-23 04:02:15 JST",
+  "source": "Premier League official standings (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
+  "live_matches": [],
   "teams": [
     {
       "team": "Arsenal",
@@ -192,7 +185,7 @@
       "points": 0
     },
     {
-      "team": "Tottenham Hotspur",
+      "team": "Coventry City",
       "rank": 19,
       "played": 1,
       "won": 0,
@@ -202,7 +195,7 @@
       "points": 0
     },
     {
-      "team": "Coventry City",
+      "team": "Tottenham Hotspur",
       "rank": 20,
       "played": 1,
       "won": 0,
