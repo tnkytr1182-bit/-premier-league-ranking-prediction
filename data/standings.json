@@ -1,12 +1,12 @@
 {
-  "updated": "2026-08-23 01:44:41 JST",
+  "updated": "2026-08-23 02:46:58 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Brentford",
       "away": "Tottenham Hotspur",
-      "home_score": 1,
+      "home_score": 3,
       "away_score": 0
     }
   ],
@@ -22,17 +22,17 @@
       "points": 3
     },
     {
-      "team": "Everton",
+      "team": "Brentford",
       "rank": 2,
       "played": 1,
       "won": 1,
       "drawn": 0,
       "lost": 0,
-      "gd": 2,
+      "gd": 3,
       "points": 3
     },
     {
-      "team": "Hull City",
+      "team": "Everton",
       "rank": 3,
       "played": 1,
       "won": 1,
@@ -42,17 +42,17 @@
       "points": 3
     },
     {
-      "team": "Ipswich Town",
+      "team": "Hull City",
       "rank": 4,
       "played": 1,
       "won": 1,
       "drawn": 0,
       "lost": 0,
-      "gd": 1,
+      "gd": 2,
       "points": 3
     },
     {
-      "team": "Leeds United",
+      "team": "Ipswich Town",
       "rank": 5,
       "played": 1,
       "won": 1,
@@ -62,7 +62,7 @@
       "points": 3
     },
     {
-      "team": "Brentford",
+      "team": "Leeds United",
       "rank": 6,
       "played": 1,
       "won": 1,
@@ -162,7 +162,7 @@
       "points": 0
     },
     {
-      "team": "Tottenham Hotspur",
+      "team": "Nottingham Forest",
       "rank": 16,
       "played": 1,
       "won": 0,
@@ -172,18 +172,8 @@
       "points": 0
     },
     {
-      "team": "Nottingham Forest",
-      "rank": 17,
-      "played": 1,
-      "won": 0,
-      "drawn": 0,
-      "lost": 1,
-      "gd": -1,
-      "points": 0
-    },
-    {
       "team": "Crystal Palace",
-      "rank": 18,
+      "rank": 17,
       "played": 1,
       "won": 0,
       "drawn": 0,
@@ -193,12 +183,22 @@
     },
     {
       "team": "Manchester United",
-      "rank": 19,
+      "rank": 18,
       "played": 1,
       "won": 0,
       "drawn": 0,
       "lost": 1,
       "gd": -2,
+      "points": 0
+    },
+    {
+      "team": "Tottenham Hotspur",
+      "rank": 19,
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "gd": -3,
       "points": 0
     },
     {
