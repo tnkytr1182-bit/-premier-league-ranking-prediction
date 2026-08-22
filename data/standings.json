@@ -1,20 +1,20 @@
 {
-  "updated": "2026-08-22 13:39:25 JST",
-  "source": "Official Fantasy Premier League fixtures",
-  "source_url": "https://fantasy.premierleague.com/api/fixtures/",
+  "updated": "2026-08-22 13:49:26 JST",
+  "source": "Premier League official standings (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
   "teams": [
     {
-      "team": "AFC Bournemouth",
+      "team": "Arsenal",
       "rank": 1,
-      "played": 0,
-      "won": 0,
+      "played": 1,
+      "won": 1,
       "drawn": 0,
       "lost": 0,
-      "gd": 0,
-      "points": 0
+      "gd": 3,
+      "points": 3
     },
     {
-      "team": "Arsenal",
+      "team": "Aston Villa",
       "rank": 2,
       "played": 0,
       "won": 0,
@@ -24,7 +24,7 @@
       "points": 0
     },
     {
-      "team": "Aston Villa",
+      "team": "AFC Bournemouth",
       "rank": 3,
       "played": 0,
       "won": 0,
@@ -64,7 +64,7 @@
       "points": 0
     },
     {
-      "team": "Coventry City",
+      "team": "Crystal Palace",
       "rank": 7,
       "played": 0,
       "won": 0,
@@ -74,7 +74,7 @@
       "points": 0
     },
     {
-      "team": "Crystal Palace",
+      "team": "Everton",
       "rank": 8,
       "played": 0,
       "won": 0,
@@ -84,7 +84,7 @@
       "points": 0
     },
     {
-      "team": "Everton",
+      "team": "Fulham",
       "rank": 9,
       "played": 0,
       "won": 0,
@@ -94,7 +94,7 @@
       "points": 0
     },
     {
-      "team": "Fulham",
+      "team": "Hull City",
       "rank": 10,
       "played": 0,
       "won": 0,
@@ -104,7 +104,7 @@
       "points": 0
     },
     {
-      "team": "Hull City",
+      "team": "Ipswich Town",
       "rank": 11,
       "played": 0,
       "won": 0,
@@ -114,7 +114,7 @@
       "points": 0
     },
     {
-      "team": "Ipswich Town",
+      "team": "Leeds United",
       "rank": 12,
       "played": 0,
       "won": 0,
@@ -124,7 +124,7 @@
       "points": 0
     },
     {
-      "team": "Leeds United",
+      "team": "Liverpool",
       "rank": 13,
       "played": 0,
       "won": 0,
@@ -134,7 +134,7 @@
       "points": 0
     },
     {
-      "team": "Liverpool",
+      "team": "Manchester City",
       "rank": 14,
       "played": 0,
       "won": 0,
@@ -144,7 +144,7 @@
       "points": 0
     },
     {
-      "team": "Manchester City",
+      "team": "Manchester United",
       "rank": 15,
       "played": 0,
       "won": 0,
@@ -154,7 +154,7 @@
       "points": 0
     },
     {
-      "team": "Manchester United",
+      "team": "Newcastle United",
       "rank": 16,
       "played": 0,
       "won": 0,
@@ -164,7 +164,7 @@
       "points": 0
     },
     {
-      "team": "Newcastle United",
+      "team": "Nottingham Forest",
       "rank": 17,
       "played": 0,
       "won": 0,
@@ -174,7 +174,7 @@
       "points": 0
     },
     {
-      "team": "Nottingham Forest",
+      "team": "Sunderland",
       "rank": 18,
       "played": 0,
       "won": 0,
@@ -184,7 +184,7 @@
       "points": 0
     },
     {
-      "team": "Sunderland",
+      "team": "Tottenham Hotspur",
       "rank": 19,
       "played": 0,
       "won": 0,
@@ -194,13 +194,13 @@
       "points": 0
     },
     {
-      "team": "Tottenham Hotspur",
+      "team": "Coventry City",
       "rank": 20,
-      "played": 0,
+      "played": 1,
       "won": 0,
       "drawn": 0,
-      "lost": 0,
-      "gd": 0,
+      "lost": 1,
+      "gd": -3,
       "points": 0
     }
   ]
