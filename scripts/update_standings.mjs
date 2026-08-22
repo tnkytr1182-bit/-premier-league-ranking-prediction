@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 
-const API_URL = 'https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false';
+const API_URL = 'https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=true';
 const STANDINGS_PATH = 'data/standings.json';
 const TEAMS_PATH = 'data/teams.json';
 const SEASON_STARTED_AT = new Date('2026-08-21T22:30:00Z');
@@ -48,7 +48,7 @@ const previousPlayed=(previous.teams||[]).reduce((sum,t)=>sum+num(t.played),0);
 const payload=await fetchJson(API_URL);
 const tables=Array.isArray(payload?.tables)?payload.tables:[];
 const entries=tables.flatMap(t=>Array.isArray(t?.entries)?t.entries:[]);
-if(entries.length<20)throw new Error(`Official standings returned only ${entries.length} entries`);
+if(entries.length<20)throw new Error(`Official live standings returned only ${entries.length} entries`);
 
 const rows=[];
 const unmapped=[];
@@ -74,26 +74,26 @@ const normalized=[...unique.values()].sort((a,b)=>a.rank-b.rank);
 const found=new Set(normalized.map(r=>r.team));
 const missing=expectedTeams.filter(t=>!found.has(t));
 if(normalized.length!==20||missing.length){
-  console.error('Unmapped official entries:',JSON.stringify(unmapped));
-  throw new Error(`Official standings team validation failed (${normalized.length}/20). Missing: ${missing.join(', ')}`);
+  console.error('Unmapped official live entries:',JSON.stringify(unmapped));
+  throw new Error(`Official live standings team validation failed (${normalized.length}/20). Missing: ${missing.join(', ')}`);
 }
 
 const ranks=normalized.map(r=>r.rank).sort((a,b)=>a-b);
-if(ranks.some((r,i)=>r!==i+1))throw new Error(`Invalid official ranks: ${ranks.join(',')}`);
+if(ranks.some((r,i)=>r!==i+1))throw new Error(`Invalid official live ranks: ${ranks.join(',')}`);
 
 const totalPlayed=normalized.reduce((sum,t)=>sum+t.played,0);
 if(new Date()>SEASON_STARTED_AT && totalPlayed===0){
-  throw new Error('Refusing zero-match standings after season start');
+  throw new Error('Refusing zero-match live standings after season start');
 }
 if(previousPlayed>0 && totalPlayed<previousPlayed){
-  throw new Error(`Refusing regressed standings: total played ${totalPlayed} < previous ${previousPlayed}`);
+  throw new Error(`Refusing regressed live standings: total played ${totalPlayed} < previous ${previousPlayed}`);
 }
 
 if(JSON.stringify(previous.teams||[])===JSON.stringify(normalized)){
-  console.log(`Standings unchanged. Official table total played=${totalPlayed}.`);
+  console.log(`Live standings unchanged. Official table total played=${totalPlayed}.`);
   process.exit(0);
 }
 
 const jst=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date())+' JST';
-fs.writeFileSync(STANDINGS_PATH,JSON.stringify({updated:jst,source:'Premier League official standings (Pulselive)',source_url:API_URL,teams:normalized},null,2)+'\n');
-console.log(`Updated official standings at ${jst}; total played=${totalPlayed}`);
+fs.writeFileSync(STANDINGS_PATH,JSON.stringify({updated:jst,source:'Premier League official live standings (Pulselive)',source_url:API_URL,teams:normalized},null,2)+'\n');
+console.log(`Updated official live standings at ${jst}; total played=${totalPlayed}`);
