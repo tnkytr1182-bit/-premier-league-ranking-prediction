@@ -1,7 +1,27 @@
 {
-  "updated": "2026-08-22 21:34:00 JST",
-  "source": "Premier League official live standings (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=true",
+  "updated": "2026-08-22 23:51:28 JST",
+  "source": "Premier League official table + live match scores (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
+  "live_matches": [
+    {
+      "home": "Everton",
+      "away": "Crystal Palace",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "Ipswich Town",
+      "away": "Sunderland",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "Nottingham Forest",
+      "away": "Leeds United",
+      "home_score": 0,
+      "away_score": 0
+    }
+  ],
   "teams": [
     {
       "team": "Arsenal",
@@ -24,57 +44,57 @@
       "points": 3
     },
     {
-      "team": "Aston Villa",
+      "team": "Everton",
       "rank": 3,
-      "played": 0,
-      "won": 0,
+      "played": 1,
+      "won": 1,
       "drawn": 0,
       "lost": 0,
-      "gd": 0,
-      "points": 0
+      "gd": 1,
+      "points": 3
     },
     {
-      "team": "AFC Bournemouth",
+      "team": "Ipswich Town",
       "rank": 4,
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
       "gd": 0,
-      "points": 0
+      "points": 1
     },
     {
-      "team": "Brentford",
+      "team": "Sunderland",
       "rank": 5,
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
       "gd": 0,
-      "points": 0
+      "points": 1
     },
     {
-      "team": "Brighton & Hove Albion",
+      "team": "Leeds United",
       "rank": 6,
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
       "gd": 0,
-      "points": 0
+      "points": 1
     },
     {
-      "team": "Chelsea",
+      "team": "Nottingham Forest",
       "rank": 7,
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
       "gd": 0,
-      "points": 0
+      "points": 1
     },
     {
-      "team": "Crystal Palace",
+      "team": "Aston Villa",
       "rank": 8,
       "played": 0,
       "won": 0,
@@ -84,7 +104,7 @@
       "points": 0
     },
     {
-      "team": "Everton",
+      "team": "AFC Bournemouth",
       "rank": 9,
       "played": 0,
       "won": 0,
@@ -94,7 +114,7 @@
       "points": 0
     },
     {
-      "team": "Fulham",
+      "team": "Brentford",
       "rank": 10,
       "played": 0,
       "won": 0,
@@ -104,7 +124,7 @@
       "points": 0
     },
     {
-      "team": "Ipswich Town",
+      "team": "Brighton & Hove Albion",
       "rank": 11,
       "played": 0,
       "won": 0,
@@ -114,7 +134,7 @@
       "points": 0
     },
     {
-      "team": "Leeds United",
+      "team": "Chelsea",
       "rank": 12,
       "played": 0,
       "won": 0,
@@ -124,7 +144,7 @@
       "points": 0
     },
     {
-      "team": "Liverpool",
+      "team": "Fulham",
       "rank": 13,
       "played": 0,
       "won": 0,
@@ -134,7 +154,7 @@
       "points": 0
     },
     {
-      "team": "Manchester City",
+      "team": "Liverpool",
       "rank": 14,
       "played": 0,
       "won": 0,
@@ -144,7 +164,7 @@
       "points": 0
     },
     {
-      "team": "Newcastle United",
+      "team": "Manchester City",
       "rank": 15,
       "played": 0,
       "won": 0,
@@ -154,7 +174,7 @@
       "points": 0
     },
     {
-      "team": "Nottingham Forest",
+      "team": "Newcastle United",
       "rank": 16,
       "played": 0,
       "won": 0,
@@ -164,7 +184,7 @@
       "points": 0
     },
     {
-      "team": "Sunderland",
+      "team": "Tottenham Hotspur",
       "rank": 17,
       "played": 0,
       "won": 0,
@@ -174,13 +194,13 @@
       "points": 0
     },
     {
-      "team": "Tottenham Hotspur",
+      "team": "Crystal Palace",
       "rank": 18,
-      "played": 0,
+      "played": 1,
       "won": 0,
       "drawn": 0,
-      "lost": 0,
-      "gd": 0,
+      "lost": 1,
+      "gd": -1,
       "points": 0
     },
     {
