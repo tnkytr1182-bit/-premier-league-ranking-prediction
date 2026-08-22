@@ -99,13 +99,27 @@ const unmapped = [];
 for (const t of fplTeams) {
   const name = canonical(t.name, t.short_name);
   if (expectedSet.has(name)) idToTeam.set(t.id, name);
-  else unmapped.push({id:t.id,name:t.name,short_name:t.short_name,mapped:name});
+  else unmapped.push(t);
+}
+
+// If exactly one FPL club and one expected club remain, they must represent
+// the same Premier League member; tolerate the provider's naming variant.
+if (idToTeam.size === 19 && unmapped.length === 1) {
+  const found = new Set(idToTeam.values());
+  const missing = expectedTeams.filter(team => !found.has(team));
+  if (missing.length === 1) {
+    const t = unmapped[0];
+    idToTeam.set(t.id, missing[0]);
+    console.log(`Auto-mapped FPL team "${t.name}" (${t.short_name}) -> "${missing[0]}"`);
+    unmapped.length = 0;
+  }
 }
 
 if (idToTeam.size !== 20) {
   const found = new Set(idToTeam.values());
   const missing = expectedTeams.filter(t => !found.has(t));
-  console.error('Unmapped FPL teams:', JSON.stringify(unmapped));
+  console.error('FPL teams:', JSON.stringify(fplTeams.map(t => ({id:t.id,name:t.name,short_name:t.short_name}))));
+  console.error('Unmapped FPL teams:', JSON.stringify(unmapped.map(t => ({id:t.id,name:t.name,short_name:t.short_name}))));
   throw new Error(`FPL team mapping incomplete (${idToTeam.size}/20). Missing: ${missing.join(', ')}`);
 }
 
