@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23 22:45:14 JST",
+  "updated": "2026-08-23 23:51:57 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
@@ -12,7 +12,7 @@
     {
       "home": "Manchester City",
       "away": "AFC Bournemouth",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 1
     }
   ],
@@ -91,24 +91,24 @@
       "team": "AFC Bournemouth",
       "rank": 8,
       "played": 1,
-      "won": 1,
-      "drawn": 0,
+      "won": 0,
+      "drawn": 1,
       "lost": 0,
-      "gd": 1,
-      "points": 3
+      "gd": 0,
+      "points": 1
+    },
+    {
+      "team": "Manchester City",
+      "rank": 9,
+      "played": 1,
+      "won": 0,
+      "drawn": 1,
+      "lost": 0,
+      "gd": 0,
+      "points": 1
     },
     {
       "team": "Chelsea",
-      "rank": 9,
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "gd": 0,
-      "points": 0
-    },
-    {
-      "team": "Fulham",
       "rank": 10,
       "played": 0,
       "won": 0,
@@ -118,7 +118,7 @@
       "points": 0
     },
     {
-      "team": "Liverpool",
+      "team": "Fulham",
       "rank": 11,
       "played": 0,
       "won": 0,
@@ -128,7 +128,7 @@
       "points": 0
     },
     {
-      "team": "Newcastle United",
+      "team": "Liverpool",
       "rank": 12,
       "played": 0,
       "won": 0,
@@ -138,17 +138,17 @@
       "points": 0
     },
     {
-      "team": "Sunderland",
+      "team": "Newcastle United",
       "rank": 13,
-      "played": 1,
+      "played": 0,
       "won": 0,
       "drawn": 0,
-      "lost": 1,
-      "gd": -1,
+      "lost": 0,
+      "gd": 0,
       "points": 0
     },
     {
-      "team": "Manchester City",
+      "team": "Sunderland",
       "rank": 14,
       "played": 1,
       "won": 0,
