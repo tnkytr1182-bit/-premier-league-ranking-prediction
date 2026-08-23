@@ -1,15 +1,8 @@
 {
-  "updated": "2026-08-24 01:56:25 JST",
-  "source": "Premier League official table + live match scores (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
-  "live_matches": [
-    {
-      "home": "Newcastle United",
-      "away": "Liverpool",
-      "home_score": 2,
-      "away_score": 1
-    }
-  ],
+  "updated": "2026-08-24 02:49:24 JST",
+  "source": "Premier League official standings (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
+  "live_matches": [],
   "teams": [
     {
       "team": "Brighton & Hove Albion",
@@ -82,7 +75,7 @@
       "points": 3
     },
     {
-      "team": "Newcastle United",
+      "team": "Leeds United",
       "rank": 8,
       "played": 1,
       "won": 1,
@@ -92,27 +85,27 @@
       "points": 3
     },
     {
-      "team": "Leeds United",
+      "team": "Liverpool",
       "rank": 9,
       "played": 1,
-      "won": 1,
-      "drawn": 0,
+      "won": 0,
+      "drawn": 1,
       "lost": 0,
-      "gd": 1,
-      "points": 3
+      "gd": 0,
+      "points": 1
+    },
+    {
+      "team": "Newcastle United",
+      "rank": 10,
+      "played": 1,
+      "won": 0,
+      "drawn": 1,
+      "lost": 0,
+      "gd": 0,
+      "points": 1
     },
     {
       "team": "Chelsea",
-      "rank": 10,
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "gd": 0,
-      "points": 0
-    },
-    {
-      "team": "Fulham",
       "rank": 11,
       "played": 0,
       "won": 0,
@@ -122,13 +115,13 @@
       "points": 0
     },
     {
-      "team": "Liverpool",
+      "team": "Fulham",
       "rank": 12,
-      "played": 1,
+      "played": 0,
       "won": 0,
       "drawn": 0,
-      "lost": 1,
-      "gd": -1,
+      "lost": 0,
+      "gd": 0,
       "points": 0
     },
     {
