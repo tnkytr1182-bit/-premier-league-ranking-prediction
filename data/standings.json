@@ -1,13 +1,13 @@
 {
-  "updated": "2026-08-24 00:49:16 JST",
+  "updated": "2026-08-24 01:56:25 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Newcastle United",
       "away": "Liverpool",
-      "home_score": 1,
-      "away_score": 0
+      "home_score": 2,
+      "away_score": 1
     }
   ],
   "teams": [
@@ -82,7 +82,7 @@
       "points": 3
     },
     {
-      "team": "Leeds United",
+      "team": "Newcastle United",
       "rank": 8,
       "played": 1,
       "won": 1,
@@ -92,7 +92,7 @@
       "points": 3
     },
     {
-      "team": "Newcastle United",
+      "team": "Leeds United",
       "rank": 9,
       "played": 1,
       "won": 1,
@@ -122,7 +122,7 @@
       "points": 0
     },
     {
-      "team": "AFC Bournemouth",
+      "team": "Liverpool",
       "rank": 12,
       "played": 1,
       "won": 0,
@@ -132,7 +132,7 @@
       "points": 0
     },
     {
-      "team": "Sunderland",
+      "team": "AFC Bournemouth",
       "rank": 13,
       "played": 1,
       "won": 0,
@@ -142,7 +142,7 @@
       "points": 0
     },
     {
-      "team": "Liverpool",
+      "team": "Sunderland",
       "rank": 14,
       "played": 1,
       "won": 0,
