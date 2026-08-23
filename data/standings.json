@@ -1,19 +1,13 @@
 {
-  "updated": "2026-08-23 23:51:57 JST",
+  "updated": "2026-08-24 00:49:16 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
-      "home": "Brighton & Hove Albion",
-      "away": "Aston Villa",
-      "home_score": 4,
-      "away_score": 0
-    },
-    {
-      "home": "Manchester City",
-      "away": "AFC Bournemouth",
+      "home": "Newcastle United",
+      "away": "Liverpool",
       "home_score": 1,
-      "away_score": 1
+      "away_score": 0
     }
   ],
   "teams": [
@@ -78,7 +72,7 @@
       "points": 3
     },
     {
-      "team": "Leeds United",
+      "team": "Manchester City",
       "rank": 7,
       "played": 1,
       "won": 1,
@@ -88,24 +82,24 @@
       "points": 3
     },
     {
-      "team": "AFC Bournemouth",
+      "team": "Leeds United",
       "rank": 8,
       "played": 1,
-      "won": 0,
-      "drawn": 1,
+      "won": 1,
+      "drawn": 0,
       "lost": 0,
-      "gd": 0,
-      "points": 1
+      "gd": 1,
+      "points": 3
     },
     {
-      "team": "Manchester City",
+      "team": "Newcastle United",
       "rank": 9,
       "played": 1,
-      "won": 0,
-      "drawn": 1,
+      "won": 1,
+      "drawn": 0,
       "lost": 0,
-      "gd": 0,
-      "points": 1
+      "gd": 1,
+      "points": 3
     },
     {
       "team": "Chelsea",
@@ -128,27 +122,27 @@
       "points": 0
     },
     {
-      "team": "Liverpool",
+      "team": "AFC Bournemouth",
       "rank": 12,
-      "played": 0,
+      "played": 1,
       "won": 0,
       "drawn": 0,
-      "lost": 0,
-      "gd": 0,
-      "points": 0
-    },
-    {
-      "team": "Newcastle United",
-      "rank": 13,
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "gd": 0,
+      "lost": 1,
+      "gd": -1,
       "points": 0
     },
     {
       "team": "Sunderland",
+      "rank": 13,
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "gd": -1,
+      "points": 0
+    },
+    {
+      "team": "Liverpool",
       "rank": 14,
       "played": 1,
       "won": 0,
