@@ -1,15 +1,8 @@
 {
-  "updated": "2026-08-25 04:19:44 JST",
-  "source": "Premier League official table + live match scores (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
-  "live_matches": [
-    {
-      "home": "Fulham",
-      "away": "Chelsea",
-      "home_score": 0,
-      "away_score": 1
-    }
-  ],
+  "updated": "2026-08-25 06:00:35 JST",
+  "source": "Premier League official standings (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
+  "live_matches": [],
   "teams": [
     {
       "team": "Brighton & Hove Albion",
@@ -62,7 +55,7 @@
       "points": 3
     },
     {
-      "team": "Ipswich Town",
+      "team": "Chelsea",
       "rank": 6,
       "played": 1,
       "won": 1,
@@ -72,7 +65,7 @@
       "points": 3
     },
     {
-      "team": "Manchester City",
+      "team": "Ipswich Town",
       "rank": 7,
       "played": 1,
       "won": 1,
@@ -82,7 +75,7 @@
       "points": 3
     },
     {
-      "team": "Leeds United",
+      "team": "Manchester City",
       "rank": 8,
       "played": 1,
       "won": 1,
@@ -92,7 +85,7 @@
       "points": 3
     },
     {
-      "team": "Chelsea",
+      "team": "Leeds United",
       "rank": 9,
       "played": 1,
       "won": 1,
@@ -122,7 +115,7 @@
       "points": 1
     },
     {
-      "team": "AFC Bournemouth",
+      "team": "Fulham",
       "rank": 12,
       "played": 1,
       "won": 0,
@@ -132,7 +125,7 @@
       "points": 0
     },
     {
-      "team": "Sunderland",
+      "team": "AFC Bournemouth",
       "rank": 13,
       "played": 1,
       "won": 0,
@@ -142,7 +135,7 @@
       "points": 0
     },
     {
-      "team": "Fulham",
+      "team": "Sunderland",
       "rank": 14,
       "played": 1,
       "won": 0,
