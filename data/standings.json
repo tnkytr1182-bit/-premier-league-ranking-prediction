@@ -1,8 +1,15 @@
 {
-  "updated": "2026-08-24 02:49:24 JST",
-  "source": "Premier League official standings (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
-  "live_matches": [],
+  "updated": "2026-08-25 04:19:44 JST",
+  "source": "Premier League official table + live match scores (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
+  "live_matches": [
+    {
+      "home": "Fulham",
+      "away": "Chelsea",
+      "home_score": 0,
+      "away_score": 1
+    }
+  ],
   "teams": [
     {
       "team": "Brighton & Hove Albion",
@@ -85,17 +92,17 @@
       "points": 3
     },
     {
-      "team": "Liverpool",
+      "team": "Chelsea",
       "rank": 9,
       "played": 1,
-      "won": 0,
-      "drawn": 1,
+      "won": 1,
+      "drawn": 0,
       "lost": 0,
-      "gd": 0,
-      "points": 1
+      "gd": 1,
+      "points": 3
     },
     {
-      "team": "Newcastle United",
+      "team": "Liverpool",
       "rank": 10,
       "played": 1,
       "won": 0,
@@ -105,28 +112,18 @@
       "points": 1
     },
     {
-      "team": "Chelsea",
+      "team": "Newcastle United",
       "rank": 11,
-      "played": 0,
+      "played": 1,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
       "gd": 0,
-      "points": 0
-    },
-    {
-      "team": "Fulham",
-      "rank": 12,
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "gd": 0,
-      "points": 0
+      "points": 1
     },
     {
       "team": "AFC Bournemouth",
-      "rank": 13,
+      "rank": 12,
       "played": 1,
       "won": 0,
       "drawn": 0,
@@ -136,6 +133,16 @@
     },
     {
       "team": "Sunderland",
+      "rank": 13,
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "gd": -1,
+      "points": 0
+    },
+    {
+      "team": "Fulham",
       "rank": 14,
       "played": 1,
       "won": 0,
