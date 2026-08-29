@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-30 02:53:14 JST",
+  "updated": "2026-08-30 03:05:43 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
@@ -7,7 +7,7 @@
       "home": "Tottenham Hotspur",
       "away": "Newcastle United",
       "home_score": 0,
-      "away_score": 1
+      "away_score": 2
     }
   ],
   "teams": [
@@ -32,7 +32,7 @@
       "points": 6
     },
     {
-      "team": "Everton",
+      "team": "Newcastle United",
       "rank": 3,
       "played": 2,
       "won": 1,
@@ -42,13 +42,13 @@
       "points": 4
     },
     {
-      "team": "Newcastle United",
+      "team": "Everton",
       "rank": 4,
       "played": 2,
       "won": 1,
       "drawn": 1,
       "lost": 0,
-      "gd": 1,
+      "gd": 2,
       "points": 4
     },
     {
@@ -172,18 +172,8 @@
       "points": 0
     },
     {
-      "team": "Tottenham Hotspur",
-      "rank": 17,
-      "played": 2,
-      "won": 0,
-      "drawn": 0,
-      "lost": 2,
-      "gd": -4,
-      "points": 0
-    },
-    {
       "team": "Aston Villa",
-      "rank": 18,
+      "rank": 17,
       "played": 1,
       "won": 0,
       "drawn": 0,
@@ -193,7 +183,7 @@
     },
     {
       "team": "Coventry City",
-      "rank": 19,
+      "rank": 18,
       "played": 2,
       "won": 0,
       "drawn": 0,
@@ -203,6 +193,16 @@
     },
     {
       "team": "Crystal Palace",
+      "rank": 19,
+      "played": 2,
+      "won": 0,
+      "drawn": 0,
+      "lost": 2,
+      "gd": -5,
+      "points": 0
+    },
+    {
+      "team": "Tottenham Hotspur",
       "rank": 20,
       "played": 2,
       "won": 0,
