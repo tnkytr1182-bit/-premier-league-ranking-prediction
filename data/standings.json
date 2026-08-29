@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29 21:54:45 JST",
+  "updated": "2026-08-29 22:07:08 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
@@ -7,7 +7,7 @@
       "home": "Liverpool",
       "away": "Nottingham Forest",
       "home_score": 1,
-      "away_score": 1
+      "away_score": 2
     }
   ],
   "teams": [
@@ -102,14 +102,14 @@
       "points": 3
     },
     {
-      "team": "Liverpool",
+      "team": "Nottingham Forest",
       "rank": 10,
       "played": 2,
-      "won": 0,
-      "drawn": 2,
-      "lost": 0,
+      "won": 1,
+      "drawn": 0,
+      "lost": 1,
       "gd": 0,
-      "points": 2
+      "points": 3
     },
     {
       "team": "Newcastle United",
@@ -122,7 +122,7 @@
       "points": 1
     },
     {
-      "team": "Nottingham Forest",
+      "team": "Liverpool",
       "rank": 12,
       "played": 2,
       "won": 0,
