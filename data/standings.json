@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-30 01:38:59 JST",
+  "updated": "2026-08-30 02:53:14 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
@@ -7,7 +7,7 @@
       "home": "Tottenham Hotspur",
       "away": "Newcastle United",
       "home_score": 0,
-      "away_score": 0
+      "away_score": 1
     }
   ],
   "teams": [
@@ -42,8 +42,18 @@
       "points": 4
     },
     {
-      "team": "Brighton & Hove Albion",
+      "team": "Newcastle United",
       "rank": 4,
+      "played": 2,
+      "won": 1,
+      "drawn": 1,
+      "lost": 0,
+      "gd": 1,
+      "points": 4
+    },
+    {
+      "team": "Brighton & Hove Albion",
+      "rank": 5,
       "played": 1,
       "won": 1,
       "drawn": 0,
@@ -53,16 +63,6 @@
     },
     {
       "team": "Arsenal",
-      "rank": 5,
-      "played": 1,
-      "won": 1,
-      "drawn": 0,
-      "lost": 0,
-      "gd": 3,
-      "points": 3
-    },
-    {
-      "team": "Brentford",
       "rank": 6,
       "played": 1,
       "won": 1,
@@ -72,17 +72,17 @@
       "points": 3
     },
     {
-      "team": "Chelsea",
+      "team": "Brentford",
       "rank": 7,
       "played": 1,
       "won": 1,
       "drawn": 0,
       "lost": 0,
-      "gd": 1,
+      "gd": 3,
       "points": 3
     },
     {
-      "team": "Ipswich Town",
+      "team": "Chelsea",
       "rank": 8,
       "played": 1,
       "won": 1,
@@ -92,7 +92,7 @@
       "points": 3
     },
     {
-      "team": "Leeds United",
+      "team": "Ipswich Town",
       "rank": 9,
       "played": 1,
       "won": 1,
@@ -102,17 +102,17 @@
       "points": 3
     },
     {
-      "team": "Liverpool",
+      "team": "Leeds United",
       "rank": 10,
-      "played": 2,
-      "won": 0,
-      "drawn": 2,
+      "played": 1,
+      "won": 1,
+      "drawn": 0,
       "lost": 0,
-      "gd": 0,
-      "points": 2
+      "gd": 1,
+      "points": 3
     },
     {
-      "team": "Newcastle United",
+      "team": "Liverpool",
       "rank": 11,
       "played": 2,
       "won": 0,
@@ -142,18 +142,8 @@
       "points": 1
     },
     {
-      "team": "Tottenham Hotspur",
-      "rank": 14,
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "gd": -3,
-      "points": 1
-    },
-    {
       "team": "Fulham",
-      "rank": 15,
+      "rank": 14,
       "played": 1,
       "won": 0,
       "drawn": 0,
@@ -163,7 +153,7 @@
     },
     {
       "team": "Sunderland",
-      "rank": 16,
+      "rank": 15,
       "played": 1,
       "won": 0,
       "drawn": 0,
@@ -173,12 +163,22 @@
     },
     {
       "team": "Manchester United",
-      "rank": 17,
+      "rank": 16,
       "played": 1,
       "won": 0,
       "drawn": 0,
       "lost": 1,
       "gd": -2,
+      "points": 0
+    },
+    {
+      "team": "Tottenham Hotspur",
+      "rank": 17,
+      "played": 2,
+      "won": 0,
+      "drawn": 0,
+      "lost": 2,
+      "gd": -4,
       "points": 0
     },
     {
