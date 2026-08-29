@@ -1,8 +1,15 @@
 {
-  "updated": "2026-08-30 01:01:42 JST",
-  "source": "Premier League official standings (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
-  "live_matches": [],
+  "updated": "2026-08-30 01:38:59 JST",
+  "source": "Premier League official table + live match scores (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
+  "live_matches": [
+    {
+      "home": "Tottenham Hotspur",
+      "away": "Newcastle United",
+      "home_score": 0,
+      "away_score": 0
+    }
+  ],
   "teams": [
     {
       "team": "Manchester City",
@@ -107,12 +114,12 @@
     {
       "team": "Newcastle United",
       "rank": 11,
-      "played": 1,
+      "played": 2,
       "won": 0,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 0,
       "gd": 0,
-      "points": 1
+      "points": 2
     },
     {
       "team": "AFC Bournemouth",
@@ -135,17 +142,17 @@
       "points": 1
     },
     {
-      "team": "Fulham",
+      "team": "Tottenham Hotspur",
       "rank": 14,
-      "played": 1,
+      "played": 2,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
-      "gd": -1,
-      "points": 0
+      "gd": -3,
+      "points": 1
     },
     {
-      "team": "Sunderland",
+      "team": "Fulham",
       "rank": 15,
       "played": 1,
       "won": 0,
@@ -155,23 +162,23 @@
       "points": 0
     },
     {
-      "team": "Manchester United",
+      "team": "Sunderland",
       "rank": 16,
       "played": 1,
       "won": 0,
       "drawn": 0,
       "lost": 1,
-      "gd": -2,
+      "gd": -1,
       "points": 0
     },
     {
-      "team": "Tottenham Hotspur",
+      "team": "Manchester United",
       "rank": 17,
       "played": 1,
       "won": 0,
       "drawn": 0,
       "lost": 1,
-      "gd": -3,
+      "gd": -2,
       "points": 0
     },
     {
