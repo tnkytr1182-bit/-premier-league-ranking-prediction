@@ -1,8 +1,15 @@
 {
-  "updated": "2026-08-29 06:53:24 JST",
-  "source": "Premier League official standings (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
-  "live_matches": [],
+  "updated": "2026-08-29 20:39:03 JST",
+  "source": "Premier League official table + live match scores (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
+  "live_matches": [
+    {
+      "home": "Liverpool",
+      "away": "Nottingham Forest",
+      "home_score": 0,
+      "away_score": 0
+    }
+  ],
   "teams": [
     {
       "team": "Manchester City",
@@ -97,12 +104,12 @@
     {
       "team": "Liverpool",
       "rank": 10,
-      "played": 1,
+      "played": 2,
       "won": 0,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 0,
       "gd": 0,
-      "points": 1
+      "points": 2
     },
     {
       "team": "Newcastle United",
@@ -115,17 +122,17 @@
       "points": 1
     },
     {
-      "team": "Fulham",
+      "team": "Nottingham Forest",
       "rank": 12,
-      "played": 1,
+      "played": 2,
       "won": 0,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
       "gd": -1,
-      "points": 0
+      "points": 1
     },
     {
-      "team": "AFC Bournemouth",
+      "team": "Fulham",
       "rank": 13,
       "played": 1,
       "won": 0,
@@ -135,7 +142,7 @@
       "points": 0
     },
     {
-      "team": "Sunderland",
+      "team": "AFC Bournemouth",
       "rank": 14,
       "played": 1,
       "won": 0,
@@ -145,7 +152,7 @@
       "points": 0
     },
     {
-      "team": "Nottingham Forest",
+      "team": "Sunderland",
       "rank": 15,
       "played": 1,
       "won": 0,
