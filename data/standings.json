@@ -1,12 +1,12 @@
 {
-  "updated": "2026-08-31 01:13:11 JST",
+  "updated": "2026-08-31 01:50:32 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Manchester United",
       "away": "Ipswich Town",
-      "home_score": 1,
+      "home_score": 3,
       "away_score": 1
     }
   ],
@@ -72,7 +72,7 @@
       "points": 4
     },
     {
-      "team": "Ipswich Town",
+      "team": "Leeds United",
       "rank": 7,
       "played": 2,
       "won": 1,
@@ -82,18 +82,8 @@
       "points": 4
     },
     {
-      "team": "Leeds United",
-      "rank": 8,
-      "played": 2,
-      "won": 1,
-      "drawn": 1,
-      "lost": 0,
-      "gd": 1,
-      "points": 4
-    },
-    {
       "team": "Brighton & Hove Albion",
-      "rank": 9,
+      "rank": 8,
       "played": 2,
       "won": 1,
       "drawn": 0,
@@ -103,12 +93,22 @@
     },
     {
       "team": "Arsenal",
-      "rank": 10,
+      "rank": 9,
       "played": 1,
       "won": 1,
       "drawn": 0,
       "lost": 0,
       "gd": 3,
+      "points": 3
+    },
+    {
+      "team": "Manchester United",
+      "rank": 10,
+      "played": 2,
+      "won": 1,
+      "drawn": 0,
+      "lost": 1,
+      "gd": 0,
       "points": 3
     },
     {
@@ -122,8 +122,18 @@
       "points": 3
     },
     {
-      "team": "Liverpool",
+      "team": "Ipswich Town",
       "rank": 12,
+      "played": 2,
+      "won": 1,
+      "drawn": 0,
+      "lost": 1,
+      "gd": -1,
+      "points": 3
+    },
+    {
+      "team": "Liverpool",
+      "rank": 13,
       "played": 2,
       "won": 0,
       "drawn": 2,
@@ -133,16 +143,6 @@
     },
     {
       "team": "AFC Bournemouth",
-      "rank": 13,
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "gd": -1,
-      "points": 1
-    },
-    {
-      "team": "Nottingham Forest",
       "rank": 14,
       "played": 2,
       "won": 0,
@@ -152,13 +152,13 @@
       "points": 1
     },
     {
-      "team": "Manchester United",
+      "team": "Nottingham Forest",
       "rank": 15,
       "played": 2,
       "won": 0,
       "drawn": 1,
       "lost": 1,
-      "gd": -2,
+      "gd": -1,
       "points": 1
     },
     {
