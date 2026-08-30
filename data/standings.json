@@ -1,12 +1,12 @@
 {
-  "updated": "2026-08-30 22:05:55 JST",
+  "updated": "2026-08-30 22:18:19 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Chelsea",
       "away": "Brighton & Hove Albion",
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 0
     },
     {
@@ -34,7 +34,7 @@
       "points": 6
     },
     {
-      "team": "Hull City",
+      "team": "Chelsea",
       "rank": 2,
       "played": 2,
       "won": 2,
@@ -44,13 +44,13 @@
       "points": 6
     },
     {
-      "team": "Chelsea",
+      "team": "Hull City",
       "rank": 3,
       "played": 2,
       "won": 2,
       "drawn": 0,
       "lost": 0,
-      "gd": 2,
+      "gd": 3,
       "points": 6
     },
     {
@@ -94,23 +94,23 @@
       "points": 4
     },
     {
-      "team": "Brighton & Hove Albion",
-      "rank": 8,
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "gd": 3,
-      "points": 3
-    },
-    {
       "team": "Arsenal",
-      "rank": 9,
+      "rank": 8,
       "played": 1,
       "won": 1,
       "drawn": 0,
       "lost": 0,
       "gd": 3,
+      "points": 3
+    },
+    {
+      "team": "Brighton & Hove Albion",
+      "rank": 9,
+      "played": 2,
+      "won": 1,
+      "drawn": 0,
+      "lost": 1,
+      "gd": 2,
       "points": 3
     },
     {
