@@ -1,18 +1,18 @@
 {
-  "updated": "2026-08-30 23:33:26 JST",
+  "updated": "2026-08-30 23:45:51 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Chelsea",
       "away": "Brighton & Hove Albion",
-      "home_score": 3,
+      "home_score": 4,
       "away_score": 2
     },
     {
       "home": "Leeds United",
       "away": "Brentford",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 1
     },
     {
@@ -34,13 +34,13 @@
       "points": 6
     },
     {
-      "team": "Brentford",
+      "team": "Chelsea",
       "rank": 2,
       "played": 2,
       "won": 2,
       "drawn": 0,
       "lost": 0,
-      "gd": 4,
+      "gd": 3,
       "points": 6
     },
     {
@@ -54,14 +54,14 @@
       "points": 6
     },
     {
-      "team": "Chelsea",
+      "team": "Brentford",
       "rank": 4,
       "played": 2,
-      "won": 2,
-      "drawn": 0,
+      "won": 1,
+      "drawn": 1,
       "lost": 0,
-      "gd": 2,
-      "points": 6
+      "gd": 3,
+      "points": 4
     },
     {
       "team": "Newcastle United",
@@ -84,14 +84,14 @@
       "points": 4
     },
     {
-      "team": "Brighton & Hove Albion",
+      "team": "Leeds United",
       "rank": 7,
       "played": 2,
       "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "gd": 3,
-      "points": 3
+      "drawn": 1,
+      "lost": 0,
+      "gd": 1,
+      "points": 4
     },
     {
       "team": "Arsenal",
@@ -104,8 +104,18 @@
       "points": 3
     },
     {
-      "team": "Ipswich Town",
+      "team": "Brighton & Hove Albion",
       "rank": 9,
+      "played": 2,
+      "won": 1,
+      "drawn": 0,
+      "lost": 1,
+      "gd": 2,
+      "points": 3
+    },
+    {
+      "team": "Ipswich Town",
+      "rank": 10,
       "played": 1,
       "won": 1,
       "drawn": 0,
@@ -115,16 +125,6 @@
     },
     {
       "team": "Sunderland",
-      "rank": 10,
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "gd": 0,
-      "points": 3
-    },
-    {
-      "team": "Leeds United",
       "rank": 11,
       "played": 2,
       "won": 1,
