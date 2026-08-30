@@ -1,15 +1,8 @@
 {
-  "updated": "2026-08-31 02:15:32 JST",
-  "source": "Premier League official table + live match scores (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
-  "live_matches": [
-    {
-      "home": "Manchester United",
-      "away": "Ipswich Town",
-      "home_score": 5,
-      "away_score": 1
-    }
-  ],
+  "updated": "2026-08-31 02:28:00 JST",
+  "source": "Premier League official standings (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
+  "live_matches": [],
   "teams": [
     {
       "team": "Manchester City",
@@ -108,7 +101,7 @@
       "won": 1,
       "drawn": 0,
       "lost": 1,
-      "gd": 2,
+      "gd": 1,
       "points": 3
     },
     {
@@ -128,7 +121,7 @@
       "won": 1,
       "drawn": 0,
       "lost": 1,
-      "gd": -3,
+      "gd": -2,
       "points": 3
     },
     {
