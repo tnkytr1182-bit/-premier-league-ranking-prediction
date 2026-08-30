@@ -1,8 +1,15 @@
 {
-  "updated": "2026-08-30 23:58:09 JST",
-  "source": "Premier League official standings (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
-  "live_matches": [],
+  "updated": "2026-08-31 00:35:52 JST",
+  "source": "Premier League official table + live match scores (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
+  "live_matches": [
+    {
+      "home": "Manchester United",
+      "away": "Ipswich Town",
+      "home_score": 0,
+      "away_score": 0
+    }
+  ],
   "teams": [
     {
       "team": "Manchester City",
@@ -75,8 +82,18 @@
       "points": 4
     },
     {
-      "team": "Brighton & Hove Albion",
+      "team": "Ipswich Town",
       "rank": 8,
+      "played": 2,
+      "won": 1,
+      "drawn": 1,
+      "lost": 0,
+      "gd": 1,
+      "points": 4
+    },
+    {
+      "team": "Brighton & Hove Albion",
+      "rank": 9,
       "played": 2,
       "won": 1,
       "drawn": 0,
@@ -86,22 +103,12 @@
     },
     {
       "team": "Arsenal",
-      "rank": 9,
-      "played": 1,
-      "won": 1,
-      "drawn": 0,
-      "lost": 0,
-      "gd": 3,
-      "points": 3
-    },
-    {
-      "team": "Ipswich Town",
       "rank": 10,
       "played": 1,
       "won": 1,
       "drawn": 0,
       "lost": 0,
-      "gd": 1,
+      "gd": 3,
       "points": 3
     },
     {
@@ -145,22 +152,22 @@
       "points": 1
     },
     {
-      "team": "Fulham",
+      "team": "Manchester United",
       "rank": 15,
+      "played": 2,
+      "won": 0,
+      "drawn": 1,
+      "lost": 1,
+      "gd": -2,
+      "points": 1
+    },
+    {
+      "team": "Fulham",
+      "rank": 16,
       "played": 2,
       "won": 0,
       "drawn": 0,
       "lost": 2,
-      "gd": -2,
-      "points": 0
-    },
-    {
-      "team": "Manchester United",
-      "rank": 16,
-      "played": 1,
-      "won": 0,
-      "drawn": 0,
-      "lost": 1,
       "gd": -2,
       "points": 0
     },
