@@ -1,12 +1,12 @@
 {
-  "updated": "2026-08-31 01:00:41 JST",
+  "updated": "2026-08-31 01:13:11 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Manchester United",
       "away": "Ipswich Town",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 1
     }
   ],
@@ -42,18 +42,8 @@
       "points": 6
     },
     {
-      "team": "Ipswich Town",
-      "rank": 4,
-      "played": 2,
-      "won": 2,
-      "drawn": 0,
-      "lost": 0,
-      "gd": 2,
-      "points": 6
-    },
-    {
       "team": "Brentford",
-      "rank": 5,
+      "rank": 4,
       "played": 2,
       "won": 1,
       "drawn": 1,
@@ -63,7 +53,7 @@
     },
     {
       "team": "Newcastle United",
-      "rank": 6,
+      "rank": 5,
       "played": 2,
       "won": 1,
       "drawn": 1,
@@ -73,12 +63,22 @@
     },
     {
       "team": "Everton",
-      "rank": 7,
+      "rank": 6,
       "played": 2,
       "won": 1,
       "drawn": 1,
       "lost": 0,
       "gd": 2,
+      "points": 4
+    },
+    {
+      "team": "Ipswich Town",
+      "rank": 7,
+      "played": 2,
+      "won": 1,
+      "drawn": 1,
+      "lost": 0,
+      "gd": 1,
       "points": 4
     },
     {
@@ -152,23 +152,23 @@
       "points": 1
     },
     {
-      "team": "Fulham",
+      "team": "Manchester United",
       "rank": 15,
       "played": 2,
       "won": 0,
-      "drawn": 0,
-      "lost": 2,
+      "drawn": 1,
+      "lost": 1,
       "gd": -2,
-      "points": 0
+      "points": 1
     },
     {
-      "team": "Manchester United",
+      "team": "Fulham",
       "rank": 16,
       "played": 2,
       "won": 0,
       "drawn": 0,
       "lost": 2,
-      "gd": -3,
+      "gd": -2,
       "points": 0
     },
     {
