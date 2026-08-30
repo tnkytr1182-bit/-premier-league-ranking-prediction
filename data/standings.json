@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-30 22:43:14 JST",
+  "updated": "2026-08-30 23:33:26 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
@@ -7,7 +7,7 @@
       "home": "Chelsea",
       "away": "Brighton & Hove Albion",
       "home_score": 3,
-      "away_score": 1
+      "away_score": 2
     },
     {
       "home": "Leeds United",
@@ -18,7 +18,7 @@
     {
       "home": "Sunderland",
       "away": "Fulham",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 0
     }
   ],
@@ -44,7 +44,7 @@
       "points": 6
     },
     {
-      "team": "Chelsea",
+      "team": "Hull City",
       "rank": 3,
       "played": 2,
       "won": 2,
@@ -54,13 +54,13 @@
       "points": 6
     },
     {
-      "team": "Hull City",
+      "team": "Chelsea",
       "rank": 4,
       "played": 2,
       "won": 2,
       "drawn": 0,
       "lost": 0,
-      "gd": 3,
+      "gd": 2,
       "points": 6
     },
     {
@@ -84,23 +84,23 @@
       "points": 4
     },
     {
-      "team": "Arsenal",
+      "team": "Brighton & Hove Albion",
       "rank": 7,
+      "played": 2,
+      "won": 1,
+      "drawn": 0,
+      "lost": 1,
+      "gd": 3,
+      "points": 3
+    },
+    {
+      "team": "Arsenal",
+      "rank": 8,
       "played": 1,
       "won": 1,
       "drawn": 0,
       "lost": 0,
       "gd": 3,
-      "points": 3
-    },
-    {
-      "team": "Brighton & Hove Albion",
-      "rank": 8,
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "gd": 2,
       "points": 3
     },
     {
@@ -114,7 +114,7 @@
       "points": 3
     },
     {
-      "team": "Leeds United",
+      "team": "Sunderland",
       "rank": 10,
       "played": 2,
       "won": 1,
@@ -124,8 +124,18 @@
       "points": 3
     },
     {
-      "team": "Liverpool",
+      "team": "Leeds United",
       "rank": 11,
+      "played": 2,
+      "won": 1,
+      "drawn": 0,
+      "lost": 1,
+      "gd": 0,
+      "points": 3
+    },
+    {
+      "team": "Liverpool",
+      "rank": 12,
       "played": 2,
       "won": 0,
       "drawn": 2,
@@ -135,16 +145,6 @@
     },
     {
       "team": "AFC Bournemouth",
-      "rank": 12,
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "gd": -1,
-      "points": 1
-    },
-    {
-      "team": "Nottingham Forest",
       "rank": 13,
       "played": 2,
       "won": 0,
@@ -154,7 +154,7 @@
       "points": 1
     },
     {
-      "team": "Fulham",
+      "team": "Nottingham Forest",
       "rank": 14,
       "played": 2,
       "won": 0,
@@ -164,14 +164,14 @@
       "points": 1
     },
     {
-      "team": "Sunderland",
+      "team": "Fulham",
       "rank": 15,
       "played": 2,
       "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "gd": -1,
-      "points": 1
+      "drawn": 0,
+      "lost": 2,
+      "gd": -2,
+      "points": 0
     },
     {
       "team": "Manchester United",
