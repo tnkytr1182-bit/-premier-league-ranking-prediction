@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05 04:03:06 JST",
+  "updated": "2026-09-05 04:17:30 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
@@ -7,7 +7,7 @@
       "home": "Ipswich Town",
       "away": "Liverpool",
       "home_score": 0,
-      "away_score": 0
+      "away_score": 2
     }
   ],
   "teams": [
@@ -52,8 +52,18 @@
       "points": 6
     },
     {
-      "team": "Brentford",
+      "team": "Liverpool",
       "rank": 5,
+      "played": 3,
+      "won": 1,
+      "drawn": 2,
+      "lost": 0,
+      "gd": 2,
+      "points": 5
+    },
+    {
+      "team": "Brentford",
+      "rank": 6,
       "played": 2,
       "won": 1,
       "drawn": 1,
@@ -63,16 +73,6 @@
     },
     {
       "team": "Newcastle United",
-      "rank": 6,
-      "played": 2,
-      "won": 1,
-      "drawn": 1,
-      "lost": 0,
-      "gd": 2,
-      "points": 4
-    },
-    {
-      "team": "Everton",
       "rank": 7,
       "played": 2,
       "won": 1,
@@ -82,23 +82,23 @@
       "points": 4
     },
     {
-      "team": "Leeds United",
+      "team": "Everton",
       "rank": 8,
       "played": 2,
       "won": 1,
       "drawn": 1,
       "lost": 0,
-      "gd": 1,
+      "gd": 2,
       "points": 4
     },
     {
-      "team": "Ipswich Town",
+      "team": "Leeds United",
       "rank": 9,
-      "played": 3,
+      "played": 2,
       "won": 1,
       "drawn": 1,
-      "lost": 1,
-      "gd": -2,
+      "lost": 0,
+      "gd": 1,
       "points": 4
     },
     {
@@ -122,23 +122,23 @@
       "points": 3
     },
     {
-      "team": "Liverpool",
-      "rank": 12,
-      "played": 3,
-      "won": 0,
-      "drawn": 3,
-      "lost": 0,
-      "gd": 0,
-      "points": 3
-    },
-    {
       "team": "Sunderland",
-      "rank": 13,
+      "rank": 12,
       "played": 2,
       "won": 1,
       "drawn": 0,
       "lost": 1,
       "gd": 0,
+      "points": 3
+    },
+    {
+      "team": "Ipswich Town",
+      "rank": 13,
+      "played": 3,
+      "won": 1,
+      "drawn": 0,
+      "lost": 2,
+      "gd": -4,
       "points": 3
     },
     {
