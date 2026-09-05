@@ -1,13 +1,13 @@
 {
-  "updated": "2026-09-05 20:42:12 JST",
+  "updated": "2026-09-05 22:20:54 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Newcastle United",
       "away": "AFC Bournemouth",
-      "home_score": 0,
-      "away_score": 1
+      "home_score": 2,
+      "away_score": 2
     }
   ],
   "teams": [
@@ -62,8 +62,18 @@
       "points": 5
     },
     {
-      "team": "Brentford",
+      "team": "Newcastle United",
       "rank": 6,
+      "played": 3,
+      "won": 1,
+      "drawn": 2,
+      "lost": 0,
+      "gd": 2,
+      "points": 5
+    },
+    {
+      "team": "Brentford",
+      "rank": 7,
       "played": 2,
       "won": 1,
       "drawn": 1,
@@ -73,22 +83,12 @@
     },
     {
       "team": "Everton",
-      "rank": 7,
+      "rank": 8,
       "played": 2,
       "won": 1,
       "drawn": 1,
       "lost": 0,
       "gd": 2,
-      "points": 4
-    },
-    {
-      "team": "Newcastle United",
-      "rank": 8,
-      "played": 3,
-      "won": 1,
-      "drawn": 1,
-      "lost": 1,
-      "gd": 1,
       "points": 4
     },
     {
@@ -102,18 +102,8 @@
       "points": 4
     },
     {
-      "team": "AFC Bournemouth",
-      "rank": 10,
-      "played": 3,
-      "won": 1,
-      "drawn": 1,
-      "lost": 1,
-      "gd": 0,
-      "points": 4
-    },
-    {
       "team": "Brighton & Hove Albion",
-      "rank": 11,
+      "rank": 10,
       "played": 2,
       "won": 1,
       "drawn": 0,
@@ -123,7 +113,7 @@
     },
     {
       "team": "Manchester United",
-      "rank": 12,
+      "rank": 11,
       "played": 2,
       "won": 1,
       "drawn": 0,
@@ -133,7 +123,7 @@
     },
     {
       "team": "Sunderland",
-      "rank": 13,
+      "rank": 12,
       "played": 2,
       "won": 1,
       "drawn": 0,
@@ -143,13 +133,23 @@
     },
     {
       "team": "Ipswich Town",
-      "rank": 14,
+      "rank": 13,
       "played": 3,
       "won": 1,
       "drawn": 0,
       "lost": 2,
       "gd": -4,
       "points": 3
+    },
+    {
+      "team": "AFC Bournemouth",
+      "rank": 14,
+      "played": 3,
+      "won": 0,
+      "drawn": 2,
+      "lost": 1,
+      "gd": -1,
+      "points": 2
     },
     {
       "team": "Nottingham Forest",
