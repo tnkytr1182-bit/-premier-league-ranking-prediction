@@ -1,15 +1,8 @@
 {
-  "updated": "2026-09-06 01:31:37 JST",
-  "source": "Premier League official table + live match scores (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
-  "live_matches": [
-    {
-      "home": "Hull City",
-      "away": "Aston Villa",
-      "home_score": 0,
-      "away_score": 0
-    }
-  ],
+  "updated": "2026-09-06 03:32:18 JST",
+  "source": "Premier League official standings (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
+  "live_matches": [],
   "teams": [
     {
       "team": "Manchester City",
@@ -172,7 +165,7 @@
       "points": 2
     },
     {
-      "team": "Tottenham Hotspur",
+      "team": "Aston Villa",
       "rank": 17,
       "played": 3,
       "won": 0,
@@ -182,7 +175,7 @@
       "points": 1
     },
     {
-      "team": "Aston Villa",
+      "team": "Tottenham Hotspur",
       "rank": 18,
       "played": 3,
       "won": 0,
