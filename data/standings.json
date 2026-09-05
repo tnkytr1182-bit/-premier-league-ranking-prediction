@@ -1,8 +1,15 @@
 {
-  "updated": "2026-09-06 01:15:45 JST",
-  "source": "Premier League official standings (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
-  "live_matches": [],
+  "updated": "2026-09-06 01:31:37 JST",
+  "source": "Premier League official table + live match scores (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
+  "live_matches": [
+    {
+      "home": "Hull City",
+      "away": "Aston Villa",
+      "home_score": 0,
+      "away_score": 0
+    }
+  ],
   "teams": [
     {
       "team": "Manchester City",
@@ -15,23 +22,23 @@
       "points": 9
     },
     {
-      "team": "Arsenal",
+      "team": "Hull City",
       "rank": 2,
-      "played": 2,
+      "played": 3,
       "won": 2,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
-      "gd": 4,
-      "points": 6
+      "gd": 3,
+      "points": 7
     },
     {
-      "team": "Hull City",
+      "team": "Arsenal",
       "rank": 3,
       "played": 2,
       "won": 2,
       "drawn": 0,
       "lost": 0,
-      "gd": 3,
+      "gd": 4,
       "points": 6
     },
     {
@@ -175,23 +182,23 @@
       "points": 1
     },
     {
-      "team": "Fulham",
+      "team": "Aston Villa",
       "rank": 18,
+      "played": 3,
+      "won": 0,
+      "drawn": 1,
+      "lost": 2,
+      "gd": -5,
+      "points": 1
+    },
+    {
+      "team": "Fulham",
+      "rank": 19,
       "played": 3,
       "won": 0,
       "drawn": 0,
       "lost": 3,
       "gd": -3,
-      "points": 0
-    },
-    {
-      "team": "Aston Villa",
-      "rank": 19,
-      "played": 2,
-      "won": 0,
-      "drawn": 0,
-      "lost": 2,
-      "gd": -5,
       "points": 0
     },
     {
