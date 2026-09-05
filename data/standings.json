@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-06 00:15:33 JST",
+  "updated": "2026-09-06 00:29:54 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Brentford",
       "away": "Sunderland",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 0
     },
     {
@@ -46,8 +46,18 @@
       "points": 9
     },
     {
-      "team": "Leeds United",
+      "team": "Brentford",
       "rank": 2,
+      "played": 3,
+      "won": 2,
+      "drawn": 1,
+      "lost": 0,
+      "gd": 4,
+      "points": 7
+    },
+    {
+      "team": "Leeds United",
+      "rank": 3,
       "played": 3,
       "won": 2,
       "drawn": 1,
@@ -57,7 +67,7 @@
     },
     {
       "team": "Arsenal",
-      "rank": 3,
+      "rank": 4,
       "played": 2,
       "won": 2,
       "drawn": 0,
@@ -67,7 +77,7 @@
     },
     {
       "team": "Hull City",
-      "rank": 4,
+      "rank": 5,
       "played": 2,
       "won": 2,
       "drawn": 0,
@@ -77,23 +87,13 @@
     },
     {
       "team": "Chelsea",
-      "rank": 5,
+      "rank": 6,
       "played": 2,
       "won": 2,
       "drawn": 0,
       "lost": 0,
       "gd": 2,
       "points": 6
-    },
-    {
-      "team": "Brentford",
-      "rank": 6,
-      "played": 3,
-      "won": 1,
-      "drawn": 2,
-      "lost": 0,
-      "gd": 3,
-      "points": 5
     },
     {
       "team": "Liverpool",
@@ -126,18 +126,8 @@
       "points": 4
     },
     {
-      "team": "Sunderland",
-      "rank": 10,
-      "played": 3,
-      "won": 1,
-      "drawn": 1,
-      "lost": 1,
-      "gd": 0,
-      "points": 4
-    },
-    {
       "team": "Brighton & Hove Albion",
-      "rank": 11,
+      "rank": 10,
       "played": 3,
       "won": 1,
       "drawn": 0,
@@ -147,12 +137,22 @@
     },
     {
       "team": "Manchester United",
-      "rank": 12,
+      "rank": 11,
       "played": 2,
       "won": 1,
       "drawn": 0,
       "lost": 1,
       "gd": 1,
+      "points": 3
+    },
+    {
+      "team": "Sunderland",
+      "rank": 12,
+      "played": 3,
+      "won": 1,
+      "drawn": 0,
+      "lost": 2,
+      "gd": -1,
       "points": 3
     },
     {
