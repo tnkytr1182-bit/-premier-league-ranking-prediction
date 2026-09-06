@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-06 23:13:52 JST",
+  "updated": "2026-09-06 23:43:24 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Everton",
       "away": "Manchester United",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 1
     }
   ],
@@ -52,18 +52,8 @@
       "points": 6
     },
     {
-      "team": "Manchester United",
-      "rank": 5,
-      "played": 3,
-      "won": 2,
-      "drawn": 0,
-      "lost": 1,
-      "gd": 2,
-      "points": 6
-    },
-    {
       "team": "Brentford",
-      "rank": 6,
+      "rank": 5,
       "played": 3,
       "won": 1,
       "drawn": 2,
@@ -73,7 +63,7 @@
     },
     {
       "team": "Liverpool",
-      "rank": 7,
+      "rank": 6,
       "played": 3,
       "won": 1,
       "drawn": 2,
@@ -83,6 +73,16 @@
     },
     {
       "team": "Newcastle United",
+      "rank": 7,
+      "played": 3,
+      "won": 1,
+      "drawn": 2,
+      "lost": 0,
+      "gd": 2,
+      "points": 5
+    },
+    {
+      "team": "Everton",
       "rank": 8,
       "played": 3,
       "won": 1,
@@ -112,7 +112,7 @@
       "points": 4
     },
     {
-      "team": "Everton",
+      "team": "Manchester United",
       "rank": 11,
       "played": 3,
       "won": 1,
