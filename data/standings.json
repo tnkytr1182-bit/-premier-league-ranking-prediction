@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-07 00:56:27 JST",
+  "updated": "2026-09-07 01:45:38 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Arsenal",
       "away": "Chelsea",
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 1
     }
   ],
@@ -25,11 +25,11 @@
       "team": "Arsenal",
       "rank": 2,
       "played": 3,
-      "won": 2,
-      "drawn": 1,
+      "won": 3,
+      "drawn": 0,
       "lost": 0,
-      "gd": 4,
-      "points": 7
+      "gd": 5,
+      "points": 9
     },
     {
       "team": "Hull City",
@@ -46,10 +46,10 @@
       "rank": 4,
       "played": 3,
       "won": 2,
-      "drawn": 1,
-      "lost": 0,
-      "gd": 2,
-      "points": 7
+      "drawn": 0,
+      "lost": 1,
+      "gd": 1,
+      "points": 6
     },
     {
       "team": "Brentford",
