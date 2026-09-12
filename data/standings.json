@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13 00:29:54 JST",
+  "updated": "2026-09-13 00:43:35 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
@@ -12,7 +12,7 @@
     {
       "home": "Aston Villa",
       "away": "Nottingham Forest",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 1
     },
     {
@@ -24,7 +24,7 @@
     {
       "home": "Crystal Palace",
       "away": "Ipswich Town",
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 2
     },
     {
@@ -96,18 +96,8 @@
       "points": 6
     },
     {
-      "team": "Ipswich Town",
-      "rank": 7,
-      "played": 4,
-      "won": 2,
-      "drawn": 0,
-      "lost": 2,
-      "gd": -3,
-      "points": 6
-    },
-    {
       "team": "Newcastle United",
-      "rank": 8,
+      "rank": 7,
       "played": 3,
       "won": 1,
       "drawn": 2,
@@ -117,7 +107,7 @@
     },
     {
       "team": "Everton",
-      "rank": 9,
+      "rank": 8,
       "played": 3,
       "won": 1,
       "drawn": 2,
@@ -127,7 +117,7 @@
     },
     {
       "team": "Leeds United",
-      "rank": 10,
+      "rank": 9,
       "played": 3,
       "won": 1,
       "drawn": 2,
@@ -136,18 +126,8 @@
       "points": 5
     },
     {
-      "team": "Nottingham Forest",
-      "rank": 11,
-      "played": 4,
-      "won": 1,
-      "drawn": 2,
-      "lost": 1,
-      "gd": 0,
-      "points": 5
-    },
-    {
       "team": "Brighton & Hove Albion",
-      "rank": 12,
+      "rank": 10,
       "played": 3,
       "won": 1,
       "drawn": 1,
@@ -157,7 +137,7 @@
     },
     {
       "team": "Manchester United",
-      "rank": 13,
+      "rank": 11,
       "played": 3,
       "won": 1,
       "drawn": 1,
@@ -167,12 +147,32 @@
     },
     {
       "team": "Sunderland",
-      "rank": 14,
+      "rank": 12,
       "played": 3,
       "won": 1,
       "drawn": 1,
       "lost": 1,
       "gd": 0,
+      "points": 4
+    },
+    {
+      "team": "Crystal Palace",
+      "rank": 13,
+      "played": 4,
+      "won": 1,
+      "drawn": 1,
+      "lost": 2,
+      "gd": -4,
+      "points": 4
+    },
+    {
+      "team": "Ipswich Town",
+      "rank": 14,
+      "played": 4,
+      "won": 1,
+      "drawn": 1,
+      "lost": 2,
+      "gd": -4,
       "points": 4
     },
     {
@@ -186,18 +186,28 @@
       "points": 3
     },
     {
-      "team": "Crystal Palace",
+      "team": "Nottingham Forest",
       "rank": 16,
       "played": 4,
-      "won": 1,
-      "drawn": 0,
-      "lost": 3,
-      "gd": -5,
+      "won": 0,
+      "drawn": 3,
+      "lost": 1,
+      "gd": -1,
       "points": 3
     },
     {
-      "team": "Fulham",
+      "team": "Aston Villa",
       "rank": 17,
+      "played": 4,
+      "won": 0,
+      "drawn": 2,
+      "lost": 2,
+      "gd": -5,
+      "points": 2
+    },
+    {
+      "team": "Fulham",
+      "rank": 18,
       "played": 4,
       "won": 0,
       "drawn": 1,
@@ -207,22 +217,12 @@
     },
     {
       "team": "Tottenham Hotspur",
-      "rank": 18,
+      "rank": 19,
       "played": 3,
       "won": 0,
       "drawn": 1,
       "lost": 2,
       "gd": -5,
-      "points": 1
-    },
-    {
-      "team": "Aston Villa",
-      "rank": 19,
-      "played": 4,
-      "won": 0,
-      "drawn": 1,
-      "lost": 3,
-      "gd": -6,
       "points": 1
     },
     {
