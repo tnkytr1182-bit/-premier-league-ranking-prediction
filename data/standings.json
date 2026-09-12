@@ -1,13 +1,13 @@
 {
-  "updated": "2026-09-13 00:14:32 JST",
+  "updated": "2026-09-13 00:29:54 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "AFC Bournemouth",
       "away": "Brentford",
-      "home_score": 1,
-      "away_score": 1
+      "home_score": 2,
+      "away_score": 2
     },
     {
       "home": "Aston Villa",
@@ -18,7 +18,7 @@
     {
       "home": "Chelsea",
       "away": "Hull City",
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 2
     },
     {
@@ -36,18 +36,8 @@
   ],
   "teams": [
     {
-      "team": "Hull City",
-      "rank": 1,
-      "played": 4,
-      "won": 3,
-      "drawn": 1,
-      "lost": 0,
-      "gd": 4,
-      "points": 10
-    },
-    {
       "team": "Manchester City",
-      "rank": 2,
+      "rank": 1,
       "played": 3,
       "won": 3,
       "drawn": 0,
@@ -57,7 +47,7 @@
     },
     {
       "team": "Arsenal",
-      "rank": 3,
+      "rank": 2,
       "played": 3,
       "won": 3,
       "drawn": 0,
@@ -66,8 +56,28 @@
       "points": 9
     },
     {
-      "team": "Brentford",
+      "team": "Hull City",
+      "rank": 3,
+      "played": 4,
+      "won": 2,
+      "drawn": 2,
+      "lost": 0,
+      "gd": 3,
+      "points": 8
+    },
+    {
+      "team": "Chelsea",
       "rank": 4,
+      "played": 4,
+      "won": 2,
+      "drawn": 1,
+      "lost": 1,
+      "gd": 1,
+      "points": 7
+    },
+    {
+      "team": "Brentford",
+      "rank": 5,
       "played": 4,
       "won": 1,
       "drawn": 3,
@@ -77,22 +87,12 @@
     },
     {
       "team": "Liverpool",
-      "rank": 5,
+      "rank": 6,
       "played": 4,
       "won": 1,
       "drawn": 3,
       "lost": 0,
       "gd": 2,
-      "points": 6
-    },
-    {
-      "team": "Chelsea",
-      "rank": 6,
-      "played": 4,
-      "won": 2,
-      "drawn": 0,
-      "lost": 2,
-      "gd": 0,
       "points": 6
     },
     {
