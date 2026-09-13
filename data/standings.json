@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13 23:15:01 JST",
+  "updated": "2026-09-13 23:31:06 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
@@ -7,7 +7,7 @@
       "home": "Coventry City",
       "away": "Brighton & Hove Albion",
       "home_score": 0,
-      "away_score": 2
+      "away_score": 3
     }
   ],
   "teams": [
@@ -48,7 +48,7 @@
       "won": 2,
       "drawn": 1,
       "lost": 1,
-      "gd": 5,
+      "gd": 6,
       "points": 7
     },
     {
@@ -208,7 +208,7 @@
       "won": 0,
       "drawn": 0,
       "lost": 4,
-      "gd": -7,
+      "gd": -8,
       "points": 0
     }
   ]
