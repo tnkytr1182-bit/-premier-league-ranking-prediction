@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-15 04:37:59 JST",
+  "updated": "2026-09-15 04:52:01 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Leeds United",
       "away": "Newcastle United",
-      "home_score": 2,
+      "home_score": 3,
       "away_score": 0
     }
   ],
@@ -32,17 +32,17 @@
       "points": 12
     },
     {
-      "team": "Hull City",
+      "team": "Leeds United",
       "rank": 3,
       "played": 4,
       "won": 2,
       "drawn": 2,
       "lost": 0,
-      "gd": 3,
+      "gd": 4,
       "points": 8
     },
     {
-      "team": "Leeds United",
+      "team": "Hull City",
       "rank": 4,
       "played": 4,
       "won": 2,
@@ -112,7 +112,7 @@
       "points": 6
     },
     {
-      "team": "Newcastle United",
+      "team": "Nottingham Forest",
       "rank": 11,
       "played": 4,
       "won": 1,
@@ -122,13 +122,13 @@
       "points": 5
     },
     {
-      "team": "Nottingham Forest",
+      "team": "Newcastle United",
       "rank": 12,
       "played": 4,
       "won": 1,
       "drawn": 2,
       "lost": 1,
-      "gd": 0,
+      "gd": -1,
       "points": 5
     },
     {
