@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-19 04:02:18 JST",
+  "updated": "2026-09-19 05:33:05 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Brentford",
       "away": "Chelsea",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 0
     }
   ],
@@ -32,8 +32,18 @@
       "points": 12
     },
     {
-      "team": "Leeds United",
+      "team": "Brentford",
       "rank": 3,
+      "played": 5,
+      "won": 2,
+      "drawn": 3,
+      "lost": 0,
+      "gd": 4,
+      "points": 9
+    },
+    {
+      "team": "Leeds United",
+      "rank": 4,
       "played": 4,
       "won": 2,
       "drawn": 2,
@@ -43,22 +53,12 @@
     },
     {
       "team": "Hull City",
-      "rank": 4,
+      "rank": 5,
       "played": 4,
       "won": 2,
       "drawn": 2,
       "lost": 0,
       "gd": 3,
-      "points": 8
-    },
-    {
-      "team": "Chelsea",
-      "rank": 5,
-      "played": 5,
-      "won": 2,
-      "drawn": 2,
-      "lost": 1,
-      "gd": 1,
       "points": 8
     },
     {
@@ -72,13 +72,13 @@
       "points": 7
     },
     {
-      "team": "Brentford",
+      "team": "Chelsea",
       "rank": 7,
       "played": 5,
-      "won": 1,
-      "drawn": 4,
-      "lost": 0,
-      "gd": 3,
+      "won": 2,
+      "drawn": 1,
+      "lost": 2,
+      "gd": 0,
       "points": 7
     },
     {
