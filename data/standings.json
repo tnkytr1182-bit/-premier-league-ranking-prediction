@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-19 05:33:05 JST",
+  "updated": "2026-09-19 05:46:45 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
       "home": "Brentford",
       "away": "Chelsea",
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 0
     }
   ],
@@ -38,7 +38,7 @@
       "won": 2,
       "drawn": 3,
       "lost": 0,
-      "gd": 4,
+      "gd": 5,
       "points": 9
     },
     {
@@ -78,7 +78,7 @@
       "won": 2,
       "drawn": 1,
       "lost": 2,
-      "gd": 0,
+      "gd": -1,
       "points": 7
     },
     {
