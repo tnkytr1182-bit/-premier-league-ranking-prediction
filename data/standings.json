@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12 05:36:03 JST",
+  "updated": "2026-10-13 06:51:43 JST",
   "source": "Premier League official standings (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
   "live_matches": [],
@@ -107,11 +107,11 @@
     {
       "team": "Newcastle United",
       "rank": 11,
-      "played": 5,
+      "played": 6,
       "won": 2,
       "drawn": 2,
-      "lost": 1,
-      "gd": 0,
+      "lost": 2,
+      "gd": -3,
       "points": 8
     },
     {
@@ -135,8 +135,18 @@
       "points": 6
     },
     {
-      "team": "Nottingham Forest",
+      "team": "Coventry City",
       "rank": 14,
+      "played": 6,
+      "won": 2,
+      "drawn": 0,
+      "lost": 4,
+      "gd": -6,
+      "points": 6
+    },
+    {
+      "team": "Nottingham Forest",
+      "rank": 15,
       "played": 6,
       "won": 1,
       "drawn": 2,
@@ -146,7 +156,7 @@
     },
     {
       "team": "Aston Villa",
-      "rank": 15,
+      "rank": 16,
       "played": 6,
       "won": 1,
       "drawn": 2,
@@ -156,7 +166,7 @@
     },
     {
       "team": "Sunderland",
-      "rank": 16,
+      "rank": 17,
       "played": 6,
       "won": 1,
       "drawn": 1,
@@ -166,16 +176,6 @@
     },
     {
       "team": "AFC Bournemouth",
-      "rank": 17,
-      "played": 6,
-      "won": 0,
-      "drawn": 3,
-      "lost": 3,
-      "gd": -6,
-      "points": 3
-    },
-    {
-      "team": "Tottenham Hotspur",
       "rank": 18,
       "played": 6,
       "won": 0,
@@ -185,13 +185,13 @@
       "points": 3
     },
     {
-      "team": "Coventry City",
+      "team": "Tottenham Hotspur",
       "rank": 19,
-      "played": 5,
-      "won": 1,
-      "drawn": 0,
-      "lost": 4,
-      "gd": -9,
+      "played": 6,
+      "won": 0,
+      "drawn": 3,
+      "lost": 3,
+      "gd": -6,
       "points": 3
     },
     {
