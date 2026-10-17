@@ -1,15 +1,8 @@
 {
-  "updated": "2026-10-18 02:03:25 JST",
-  "source": "Premier League official table + live match scores (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
-  "live_matches": [
-    {
-      "home": "Newcastle United",
-      "away": "Aston Villa",
-      "home_score": 0,
-      "away_score": 0
-    }
-  ],
+  "updated": "2026-10-18 04:19:16 JST",
+  "source": "Premier League official standings (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
+  "live_matches": [],
   "teams": [
     {
       "team": "Manchester City",
@@ -102,18 +95,8 @@
       "points": 9
     },
     {
-      "team": "Newcastle United",
-      "rank": 10,
-      "played": 7,
-      "won": 2,
-      "drawn": 3,
-      "lost": 2,
-      "gd": -3,
-      "points": 9
-    },
-    {
       "team": "Ipswich Town",
-      "rank": 11,
+      "rank": 10,
       "played": 7,
       "won": 3,
       "drawn": 0,
@@ -122,8 +105,28 @@
       "points": 9
     },
     {
-      "team": "Crystal Palace",
+      "team": "Newcastle United",
+      "rank": 11,
+      "played": 7,
+      "won": 2,
+      "drawn": 2,
+      "lost": 3,
+      "gd": -4,
+      "points": 8
+    },
+    {
+      "team": "Aston Villa",
       "rank": 12,
+      "played": 7,
+      "won": 2,
+      "drawn": 2,
+      "lost": 3,
+      "gd": -4,
+      "points": 8
+    },
+    {
+      "team": "Crystal Palace",
+      "rank": 13,
       "played": 6,
       "won": 2,
       "drawn": 1,
@@ -133,22 +136,12 @@
     },
     {
       "team": "Manchester United",
-      "rank": 13,
+      "rank": 14,
       "played": 6,
       "won": 1,
       "drawn": 3,
       "lost": 2,
       "gd": 0,
-      "points": 6
-    },
-    {
-      "team": "Aston Villa",
-      "rank": 14,
-      "played": 7,
-      "won": 1,
-      "drawn": 3,
-      "lost": 3,
-      "gd": -5,
       "points": 6
     },
     {
