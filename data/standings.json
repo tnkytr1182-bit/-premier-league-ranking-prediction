@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19 02:35:15 JST",
+  "updated": "2026-10-20 06:26:58 JST",
   "source": "Premier League official standings (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
   "live_matches": [],
@@ -155,18 +155,28 @@
       "points": 6
     },
     {
-      "team": "Coventry City",
+      "team": "Tottenham Hotspur",
       "rank": 16,
-      "played": 6,
+      "played": 7,
+      "won": 1,
+      "drawn": 3,
+      "lost": 3,
+      "gd": -4,
+      "points": 6
+    },
+    {
+      "team": "Coventry City",
+      "rank": 17,
+      "played": 7,
       "won": 2,
       "drawn": 0,
-      "lost": 4,
-      "gd": -6,
+      "lost": 5,
+      "gd": -8,
       "points": 6
     },
     {
       "team": "Fulham",
-      "rank": 17,
+      "rank": 18,
       "played": 7,
       "won": 1,
       "drawn": 2,
@@ -176,7 +186,7 @@
     },
     {
       "team": "Nottingham Forest",
-      "rank": 18,
+      "rank": 19,
       "played": 7,
       "won": 1,
       "drawn": 2,
@@ -186,23 +196,13 @@
     },
     {
       "team": "Sunderland",
-      "rank": 19,
+      "rank": 20,
       "played": 7,
       "won": 1,
       "drawn": 1,
       "lost": 5,
       "gd": -8,
       "points": 4
-    },
-    {
-      "team": "Tottenham Hotspur",
-      "rank": 20,
-      "played": 6,
-      "won": 0,
-      "drawn": 3,
-      "lost": 3,
-      "gd": -6,
-      "points": 3
     }
   ]
 }
