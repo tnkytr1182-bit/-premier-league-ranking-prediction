@@ -1,15 +1,8 @@
 {
-  "updated": "2026-10-24 05:20:20 JST",
-  "source": "Premier League official table + live match scores (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
-  "live_matches": [
-    {
-      "home": "Ipswich Town",
-      "away": "Nottingham Forest",
-      "home_score": 1,
-      "away_score": 1
-    }
-  ],
+  "updated": "2026-10-24 08:16:42 JST",
+  "source": "Premier League official standings (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
+  "live_matches": [],
   "teams": [
     {
       "team": "Manchester City",
@@ -162,22 +155,22 @@
       "points": 6
     },
     {
-      "team": "Tottenham Hotspur",
-      "rank": 16,
-      "played": 7,
-      "won": 1,
-      "drawn": 3,
-      "lost": 3,
-      "gd": -4,
-      "points": 6
-    },
-    {
       "team": "Nottingham Forest",
-      "rank": 17,
+      "rank": 16,
       "played": 8,
       "won": 1,
       "drawn": 3,
       "lost": 4,
+      "gd": -4,
+      "points": 6
+    },
+    {
+      "team": "Tottenham Hotspur",
+      "rank": 17,
+      "played": 7,
+      "won": 1,
+      "drawn": 3,
+      "lost": 3,
       "gd": -4,
       "points": 6
     },
