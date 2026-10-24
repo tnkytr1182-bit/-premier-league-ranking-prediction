@@ -1,15 +1,8 @@
 {
-  "updated": "2026-10-25 02:45:56 JST",
-  "source": "Premier League official table + live match scores (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
-  "live_matches": [
-    {
-      "home": "Chelsea",
-      "away": "Tottenham Hotspur",
-      "home_score": 0,
-      "away_score": 0
-    }
-  ],
+  "updated": "2026-10-25 04:51:55 JST",
+  "source": "Premier League official standings (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
+  "live_matches": [],
   "teams": [
     {
       "team": "Manchester City",
@@ -46,10 +39,10 @@
       "rank": 4,
       "played": 8,
       "won": 4,
-      "drawn": 2,
-      "lost": 2,
-      "gd": 4,
-      "points": 14
+      "drawn": 1,
+      "lost": 3,
+      "gd": 2,
+      "points": 13
     },
     {
       "team": "Liverpool",
@@ -122,8 +115,18 @@
       "points": 9
     },
     {
-      "team": "Fulham",
+      "team": "Tottenham Hotspur",
       "rank": 12,
+      "played": 8,
+      "won": 2,
+      "drawn": 3,
+      "lost": 3,
+      "gd": -2,
+      "points": 9
+    },
+    {
+      "team": "Fulham",
+      "rank": 13,
       "played": 8,
       "won": 2,
       "drawn": 2,
@@ -133,7 +136,7 @@
     },
     {
       "team": "Newcastle United",
-      "rank": 13,
+      "rank": 14,
       "played": 7,
       "won": 2,
       "drawn": 2,
@@ -143,22 +146,12 @@
     },
     {
       "team": "Manchester United",
-      "rank": 14,
+      "rank": 15,
       "played": 7,
       "won": 1,
       "drawn": 4,
       "lost": 2,
       "gd": 0,
-      "points": 7
-    },
-    {
-      "team": "Tottenham Hotspur",
-      "rank": 15,
-      "played": 8,
-      "won": 1,
-      "drawn": 4,
-      "lost": 3,
-      "gd": -4,
       "points": 7
     },
     {
