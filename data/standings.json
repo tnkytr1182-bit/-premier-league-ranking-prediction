@@ -1,8 +1,15 @@
 {
-  "updated": "2026-10-25 04:51:55 JST",
-  "source": "Premier League official standings (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
-  "live_matches": [],
+  "updated": "2026-10-26 02:35:36 JST",
+  "source": "Premier League official table + live match scores (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
+  "live_matches": [
+    {
+      "home": "Sunderland",
+      "away": "Leeds United",
+      "home_score": 0,
+      "away_score": 0
+    }
+  ],
   "teams": [
     {
       "team": "Manchester City",
@@ -27,16 +34,26 @@
     {
       "team": "Brighton & Hove Albion",
       "rank": 3,
-      "played": 7,
+      "played": 8,
       "won": 5,
       "drawn": 1,
-      "lost": 1,
-      "gd": 18,
+      "lost": 2,
+      "gd": 16,
       "points": 16
     },
     {
-      "team": "Chelsea",
+      "team": "Liverpool",
       "rank": 4,
+      "played": 8,
+      "won": 4,
+      "drawn": 3,
+      "lost": 1,
+      "gd": 3,
+      "points": 15
+    },
+    {
+      "team": "Chelsea",
+      "rank": 5,
       "played": 8,
       "won": 4,
       "drawn": 1,
@@ -45,18 +62,38 @@
       "points": 13
     },
     {
-      "team": "Liverpool",
-      "rank": 5,
-      "played": 7,
-      "won": 3,
-      "drawn": 3,
+      "team": "Brentford",
+      "rank": 6,
+      "played": 8,
+      "won": 2,
+      "drawn": 5,
       "lost": 1,
-      "gd": 1,
-      "points": 12
+      "gd": 5,
+      "points": 11
+    },
+    {
+      "team": "Leeds United",
+      "rank": 7,
+      "played": 8,
+      "won": 2,
+      "drawn": 5,
+      "lost": 1,
+      "gd": 3,
+      "points": 11
+    },
+    {
+      "team": "Newcastle United",
+      "rank": 8,
+      "played": 8,
+      "won": 3,
+      "drawn": 2,
+      "lost": 3,
+      "gd": -2,
+      "points": 11
     },
     {
       "team": "Aston Villa",
-      "rank": 6,
+      "rank": 9,
       "played": 8,
       "won": 3,
       "drawn": 2,
@@ -65,28 +102,18 @@
       "points": 11
     },
     {
-      "team": "Brentford",
-      "rank": 7,
-      "played": 7,
+      "team": "Hull City",
+      "rank": 10,
+      "played": 8,
       "won": 2,
       "drawn": 4,
-      "lost": 1,
-      "gd": 5,
-      "points": 10
-    },
-    {
-      "team": "Leeds United",
-      "rank": 8,
-      "played": 7,
-      "won": 2,
-      "drawn": 4,
-      "lost": 1,
-      "gd": 3,
+      "lost": 2,
+      "gd": 1,
       "points": 10
     },
     {
       "team": "Everton",
-      "rank": 9,
+      "rank": 11,
       "played": 8,
       "won": 2,
       "drawn": 4,
@@ -96,7 +123,7 @@
     },
     {
       "team": "Ipswich Town",
-      "rank": 10,
+      "rank": 12,
       "played": 8,
       "won": 3,
       "drawn": 1,
@@ -105,18 +132,18 @@
       "points": 10
     },
     {
-      "team": "Hull City",
-      "rank": 11,
-      "played": 7,
+      "team": "AFC Bournemouth",
+      "rank": 13,
+      "played": 8,
       "won": 2,
       "drawn": 3,
-      "lost": 2,
-      "gd": 1,
+      "lost": 3,
+      "gd": -1,
       "points": 9
     },
     {
       "team": "Tottenham Hotspur",
-      "rank": 12,
+      "rank": 14,
       "played": 8,
       "won": 2,
       "drawn": 3,
@@ -126,7 +153,7 @@
     },
     {
       "team": "Fulham",
-      "rank": 13,
+      "rank": 15,
       "played": 8,
       "won": 2,
       "drawn": 2,
@@ -135,44 +162,24 @@
       "points": 8
     },
     {
-      "team": "Newcastle United",
-      "rank": 14,
-      "played": 7,
-      "won": 2,
-      "drawn": 2,
-      "lost": 3,
-      "gd": -4,
-      "points": 8
-    },
-    {
       "team": "Manchester United",
-      "rank": 15,
-      "played": 7,
+      "rank": 16,
+      "played": 8,
       "won": 1,
       "drawn": 4,
-      "lost": 2,
-      "gd": 0,
+      "lost": 3,
+      "gd": -3,
       "points": 7
     },
     {
       "team": "Crystal Palace",
-      "rank": 16,
-      "played": 7,
+      "rank": 17,
+      "played": 8,
       "won": 2,
       "drawn": 1,
-      "lost": 4,
-      "gd": -8,
+      "lost": 5,
+      "gd": -10,
       "points": 7
-    },
-    {
-      "team": "AFC Bournemouth",
-      "rank": 17,
-      "played": 7,
-      "won": 1,
-      "drawn": 3,
-      "lost": 3,
-      "gd": -4,
-      "points": 6
     },
     {
       "team": "Nottingham Forest",
@@ -197,12 +204,12 @@
     {
       "team": "Sunderland",
       "rank": 20,
-      "played": 7,
+      "played": 8,
       "won": 1,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 5,
       "gd": -8,
-      "points": 4
+      "points": 5
     }
   ]
 }
