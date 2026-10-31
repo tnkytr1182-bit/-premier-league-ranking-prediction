@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-01 03:43:46 JST",
+  "updated": "2026-11-01 06:55:59 JST",
   "source": "Premier League official table + live match scores (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
   "live_matches": [
     {
-      "home": "Tottenham Hotspur",
-      "away": "Crystal Palace",
+      "home": "Aston Villa",
+      "away": "Fulham",
       "home_score": 1,
-      "away_score": 0
+      "away_score": 1
     }
   ],
   "teams": [
@@ -88,21 +88,21 @@
       "won": 3,
       "drawn": 3,
       "lost": 3,
-      "gd": -1,
+      "gd": 0,
+      "points": 12
+    },
+    {
+      "team": "Aston Villa",
+      "rank": 9,
+      "played": 9,
+      "won": 3,
+      "drawn": 3,
+      "lost": 3,
+      "gd": -3,
       "points": 12
     },
     {
       "team": "Hull City",
-      "rank": 9,
-      "played": 9,
-      "won": 2,
-      "drawn": 5,
-      "lost": 2,
-      "gd": 1,
-      "points": 11
-    },
-    {
-      "team": "Leeds United",
       "rank": 10,
       "played": 9,
       "won": 2,
@@ -112,23 +112,23 @@
       "points": 11
     },
     {
-      "team": "Newcastle United",
+      "team": "Leeds United",
       "rank": 11,
-      "played": 8,
-      "won": 3,
-      "drawn": 2,
-      "lost": 3,
-      "gd": -2,
+      "played": 9,
+      "won": 2,
+      "drawn": 5,
+      "lost": 2,
+      "gd": 1,
       "points": 11
     },
     {
-      "team": "Aston Villa",
+      "team": "Newcastle United",
       "rank": 12,
       "played": 8,
       "won": 3,
       "drawn": 2,
       "lost": 3,
-      "gd": -3,
+      "gd": -2,
       "points": 11
     },
     {
@@ -152,24 +152,24 @@
       "points": 10
     },
     {
-      "team": "Coventry City",
+      "team": "Fulham",
       "rank": 15,
+      "played": 9,
+      "won": 2,
+      "drawn": 3,
+      "lost": 4,
+      "gd": -2,
+      "points": 9
+    },
+    {
+      "team": "Coventry City",
+      "rank": 16,
       "played": 9,
       "won": 3,
       "drawn": 0,
       "lost": 6,
       "gd": -7,
       "points": 9
-    },
-    {
-      "team": "Fulham",
-      "rank": 16,
-      "played": 8,
-      "won": 2,
-      "drawn": 2,
-      "lost": 4,
-      "gd": -2,
-      "points": 8
     },
     {
       "team": "Manchester United",
@@ -188,7 +188,7 @@
       "won": 2,
       "drawn": 1,
       "lost": 6,
-      "gd": -11,
+      "gd": -12,
       "points": 7
     },
     {
