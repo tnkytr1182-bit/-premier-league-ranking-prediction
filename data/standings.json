@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03 10:44:07 JST",
+  "updated": "2026-11-07 08:26:18 JST",
   "source": "Premier League official standings (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
   "live_matches": [],
@@ -45,8 +45,18 @@
       "points": 16
     },
     {
-      "team": "Liverpool",
+      "team": "Everton",
       "rank": 5,
+      "played": 10,
+      "won": 4,
+      "drawn": 4,
+      "lost": 2,
+      "gd": 2,
+      "points": 16
+    },
+    {
+      "team": "Liverpool",
+      "rank": 6,
       "played": 9,
       "won": 4,
       "drawn": 3,
@@ -56,23 +66,13 @@
     },
     {
       "team": "Brentford",
-      "rank": 6,
+      "rank": 7,
       "played": 9,
       "won": 3,
       "drawn": 5,
       "lost": 1,
       "gd": 7,
       "points": 14
-    },
-    {
-      "team": "Everton",
-      "rank": 7,
-      "played": 9,
-      "won": 3,
-      "drawn": 4,
-      "lost": 2,
-      "gd": 0,
-      "points": 13
     },
     {
       "team": "AFC Bournemouth",
@@ -157,11 +157,11 @@
     {
       "team": "Coventry City",
       "rank": 16,
-      "played": 9,
+      "played": 10,
       "won": 3,
       "drawn": 0,
-      "lost": 6,
-      "gd": -7,
+      "lost": 7,
+      "gd": -9,
       "points": 9
     },
     {
