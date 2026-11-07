@@ -1,40 +1,27 @@
 {
-  "updated": "2026-11-08 01:19:31 JST",
-  "source": "Premier League official table + live match scores (Pulselive)",
-  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v2/matches?competition=8&season=2026&_limit=500",
-  "live_matches": [
-    {
-      "home": "Arsenal",
-      "away": "Hull City",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "Fulham",
-      "away": "Newcastle United",
-      "home_score": 0,
-      "away_score": 0
-    }
-  ],
+  "updated": "2026-11-08 05:21:30 JST",
+  "source": "Premier League official standings (Pulselive)",
+  "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
+  "live_matches": [],
   "teams": [
     {
       "team": "Arsenal",
       "rank": 1,
       "played": 10,
-      "won": 8,
-      "drawn": 1,
+      "won": 9,
+      "drawn": 0,
       "lost": 1,
-      "gd": 9,
-      "points": 25
+      "gd": 10,
+      "points": 27
     },
     {
       "team": "Manchester City",
       "rank": 2,
-      "played": 9,
+      "played": 10,
       "won": 7,
       "drawn": 0,
-      "lost": 2,
-      "gd": 10,
+      "lost": 3,
+      "gd": 8,
       "points": 21
     },
     {
@@ -108,18 +95,8 @@
       "points": 12
     },
     {
-      "team": "Hull City",
-      "rank": 10,
-      "played": 10,
-      "won": 2,
-      "drawn": 6,
-      "lost": 2,
-      "gd": 1,
-      "points": 12
-    },
-    {
       "team": "Tottenham Hotspur",
-      "rank": 11,
+      "rank": 10,
       "played": 10,
       "won": 3,
       "drawn": 3,
@@ -129,7 +106,7 @@
     },
     {
       "team": "Newcastle United",
-      "rank": 12,
+      "rank": 11,
       "played": 10,
       "won": 3,
       "drawn": 3,
@@ -139,13 +116,23 @@
     },
     {
       "team": "Aston Villa",
-      "rank": 13,
+      "rank": 12,
       "played": 9,
       "won": 3,
       "drawn": 3,
       "lost": 3,
       "gd": -3,
       "points": 12
+    },
+    {
+      "team": "Hull City",
+      "rank": 13,
+      "played": 10,
+      "won": 2,
+      "drawn": 5,
+      "lost": 3,
+      "gd": 0,
+      "points": 11
     },
     {
       "team": "Ipswich Town",
@@ -168,8 +155,18 @@
       "points": 10
     },
     {
-      "team": "Coventry City",
+      "team": "Nottingham Forest",
       "rank": 16,
+      "played": 10,
+      "won": 2,
+      "drawn": 3,
+      "lost": 5,
+      "gd": -4,
+      "points": 9
+    },
+    {
+      "team": "Coventry City",
+      "rank": 17,
       "played": 10,
       "won": 3,
       "drawn": 0,
@@ -179,7 +176,7 @@
     },
     {
       "team": "Manchester United",
-      "rank": 17,
+      "rank": 18,
       "played": 9,
       "won": 1,
       "drawn": 4,
@@ -189,23 +186,13 @@
     },
     {
       "team": "Crystal Palace",
-      "rank": 18,
+      "rank": 19,
       "played": 9,
       "won": 2,
       "drawn": 1,
       "lost": 6,
       "gd": -12,
       "points": 7
-    },
-    {
-      "team": "Nottingham Forest",
-      "rank": 19,
-      "played": 9,
-      "won": 1,
-      "drawn": 3,
-      "lost": 5,
-      "gd": -6,
-      "points": 6
     },
     {
       "team": "Sunderland",
