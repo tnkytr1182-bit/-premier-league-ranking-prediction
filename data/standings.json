@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09 01:18:56 JST",
+  "updated": "2026-11-09 05:38:27 JST",
   "source": "Premier League official standings (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
   "live_matches": [],
@@ -95,8 +95,18 @@
       "points": 14
     },
     {
-      "team": "Tottenham Hotspur",
+      "team": "Aston Villa",
       "rank": 10,
+      "played": 10,
+      "won": 3,
+      "drawn": 4,
+      "lost": 3,
+      "gd": -3,
+      "points": 13
+    },
+    {
+      "team": "Tottenham Hotspur",
+      "rank": 11,
       "played": 10,
       "won": 3,
       "drawn": 3,
@@ -106,21 +116,11 @@
     },
     {
       "team": "Newcastle United",
-      "rank": 11,
+      "rank": 12,
       "played": 10,
       "won": 3,
       "drawn": 3,
       "lost": 4,
-      "gd": -3,
-      "points": 12
-    },
-    {
-      "team": "Aston Villa",
-      "rank": 12,
-      "played": 9,
-      "won": 3,
-      "drawn": 3,
-      "lost": 3,
       "gd": -3,
       "points": 12
     },
@@ -175,24 +175,24 @@
       "points": 9
     },
     {
-      "team": "Sunderland",
+      "team": "Manchester United",
       "rank": 18,
+      "played": 10,
+      "won": 1,
+      "drawn": 5,
+      "lost": 4,
+      "gd": -5,
+      "points": 8
+    },
+    {
+      "team": "Sunderland",
+      "rank": 19,
       "played": 10,
       "won": 2,
       "drawn": 2,
       "lost": 6,
       "gd": -9,
       "points": 8
-    },
-    {
-      "team": "Manchester United",
-      "rank": 19,
-      "played": 9,
-      "won": 1,
-      "drawn": 4,
-      "lost": 4,
-      "gd": -5,
-      "points": 7
     },
     {
       "team": "Crystal Palace",
