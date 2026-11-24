@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23 03:29:33 JST",
+  "updated": "2026-11-24 10:52:30 JST",
   "source": "Premier League official standings (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
   "live_matches": [],
@@ -55,24 +55,24 @@
       "points": 18
     },
     {
-      "team": "Leeds United",
+      "team": "Brentford",
       "rank": 6,
+      "played": 11,
+      "won": 4,
+      "drawn": 5,
+      "lost": 2,
+      "gd": 9,
+      "points": 17
+    },
+    {
+      "team": "Leeds United",
+      "rank": 7,
       "played": 11,
       "won": 4,
       "drawn": 5,
       "lost": 2,
       "gd": 5,
       "points": 17
-    },
-    {
-      "team": "Everton",
-      "rank": 7,
-      "played": 10,
-      "won": 4,
-      "drawn": 4,
-      "lost": 2,
-      "gd": 2,
-      "points": 16
     },
     {
       "team": "Chelsea",
@@ -85,24 +85,24 @@
       "points": 16
     },
     {
-      "team": "Tottenham Hotspur",
+      "team": "Everton",
       "rank": 9,
+      "played": 11,
+      "won": 4,
+      "drawn": 4,
+      "lost": 3,
+      "gd": -2,
+      "points": 16
+    },
+    {
+      "team": "Tottenham Hotspur",
+      "rank": 10,
       "played": 11,
       "won": 4,
       "drawn": 3,
       "lost": 4,
       "gd": 1,
       "points": 15
-    },
-    {
-      "team": "Brentford",
-      "rank": 10,
-      "played": 10,
-      "won": 3,
-      "drawn": 5,
-      "lost": 2,
-      "gd": 5,
-      "points": 14
     },
     {
       "team": "Hull City",
