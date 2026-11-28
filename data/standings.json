@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-28 10:30:14 JST",
+  "updated": "2026-11-29 02:42:50 JST",
   "source": "Premier League official standings (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
   "live_matches": [],
@@ -45,34 +45,34 @@
       "points": 21
     },
     {
-      "team": "AFC Bournemouth",
+      "team": "Brentford",
       "rank": 5,
+      "played": 12,
+      "won": 5,
+      "drawn": 5,
+      "lost": 2,
+      "gd": 13,
+      "points": 20
+    },
+    {
+      "team": "Leeds United",
+      "rank": 6,
+      "played": 12,
+      "won": 5,
+      "drawn": 5,
+      "lost": 2,
+      "gd": 8,
+      "points": 20
+    },
+    {
+      "team": "AFC Bournemouth",
+      "rank": 7,
       "played": 11,
       "won": 5,
       "drawn": 3,
       "lost": 3,
       "gd": 4,
       "points": 18
-    },
-    {
-      "team": "Brentford",
-      "rank": 6,
-      "played": 11,
-      "won": 4,
-      "drawn": 5,
-      "lost": 2,
-      "gd": 9,
-      "points": 17
-    },
-    {
-      "team": "Leeds United",
-      "rank": 7,
-      "played": 11,
-      "won": 4,
-      "drawn": 5,
-      "lost": 2,
-      "gd": 5,
-      "points": 17
     },
     {
       "team": "Chelsea",
@@ -147,11 +147,11 @@
     {
       "team": "Coventry City",
       "rank": 15,
-      "played": 11,
+      "played": 12,
       "won": 4,
       "drawn": 0,
-      "lost": 7,
-      "gd": -8,
+      "lost": 8,
+      "gd": -11,
       "points": 12
     },
     {
@@ -187,11 +187,11 @@
     {
       "team": "Manchester United",
       "rank": 19,
-      "played": 11,
+      "played": 12,
       "won": 1,
       "drawn": 5,
-      "lost": 5,
-      "gd": -9,
+      "lost": 6,
+      "gd": -13,
       "points": 8
     },
     {
