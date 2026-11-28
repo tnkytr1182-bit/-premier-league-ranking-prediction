@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24 10:52:30 JST",
+  "updated": "2026-11-28 10:30:14 JST",
   "source": "Premier League official standings (Pulselive)",
   "source_url": "https://sdp-prem-prod.premier-league-prod.pulselive.com/api/v5/competitions/8/seasons/2026/standings?live=false",
   "live_matches": [],
@@ -77,11 +77,11 @@
     {
       "team": "Chelsea",
       "rank": 8,
-      "played": 11,
+      "played": 12,
       "won": 5,
       "drawn": 1,
-      "lost": 5,
-      "gd": 0,
+      "lost": 6,
+      "gd": -1,
       "points": 16
     },
     {
@@ -135,8 +135,18 @@
       "points": 13
     },
     {
-      "team": "Coventry City",
+      "team": "Nottingham Forest",
       "rank": 14,
+      "played": 12,
+      "won": 3,
+      "drawn": 3,
+      "lost": 6,
+      "gd": -5,
+      "points": 12
+    },
+    {
+      "team": "Coventry City",
+      "rank": 15,
       "played": 11,
       "won": 4,
       "drawn": 0,
@@ -146,7 +156,7 @@
     },
     {
       "team": "Fulham",
-      "rank": 15,
+      "rank": 16,
       "played": 11,
       "won": 2,
       "drawn": 5,
@@ -156,23 +166,13 @@
     },
     {
       "team": "Ipswich Town",
-      "rank": 16,
+      "rank": 17,
       "played": 11,
       "won": 3,
       "drawn": 2,
       "lost": 6,
       "gd": -7,
       "points": 11
-    },
-    {
-      "team": "Nottingham Forest",
-      "rank": 17,
-      "played": 11,
-      "won": 2,
-      "drawn": 3,
-      "lost": 6,
-      "gd": -6,
-      "points": 9
     },
     {
       "team": "Sunderland",
